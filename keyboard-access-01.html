@@ -31,15 +31,17 @@
 			
 				<h3 aria-describedby="objDescSweater" tabindex="0">Sweater</h3>
 					<p id="objDescSweater">Large woolly sweater.</p>
-					<nav class="object-interactions" id="objIntSweater">
+					<div class="object-interactions" id="objIntSweater">
+						<h4>Interactions</h4> 
 						<ul>
 						  <li>Check the sweater's charge.</li>
 						</ul>
-					</nav> 	
+					</div> 	
 				
 					<h3 aria-describedby="objDescBalloon" tabindex="0">Balloon</h3>
 						<p id="objDescBalloon">Light yellow party balloon.</p>
-						<nav class="object-interaction" id="objIntSweater">
+						<div class="object-interaction" id="objIntSweater">
+							<h4>Interactions</h4>
 							<ul>
 							  <li>Check the balloon's charge.</li>
 					 			<li>Grab the balloon</li>
@@ -57,15 +59,16 @@
 									</ul>    
 								</li>      
 					 		</ul>				 
-						</nav>         
+						</div>         
 					                 
 					<h3 aria-describedby="objDescWall" tabindex="0">Wall</h3>
 						<p id="objDescWall">Just a stationary wall.</p>
-						<nav class="object-interaction" id="objIntWall">
+						<div class="object-interaction" id="objIntWall">
+							<h4>Interactions</h4> 
 							<ul>
 							  <li>Check the wall's charge.</li>
 							</ul>
-						</nav>
+						</div>
 			</section>
 			
 			<section >
@@ -73,6 +76,7 @@
 				  <h2 tabindex="0">Control Panel</h2>
 			    <fieldset>
 				  <legend tabindex="0">Charge Settings</legend>
+						<p>Three ways to view the charge on objects in the Play Area.</p>
 					  <label for="showCharges">Show all charges</label><input id="allCharges" name="showCharges" type="radio" checked="checked">
 					  <label for="hideCharges">Show no charges</label><input id="hideCharges" name="hideCharges" type="radio">
 					  <label for="showchargeDiffs">Show charge differences</label><input id="showchargeDiffs" name="showchargeDiffs"type="radio">
@@ -80,6 +84,7 @@
 			
 			    <fieldset>
 				  <legend tabindex="0">Balloon Settings</legend>
+				    <p>Add or remove a balloon, or reset the charges on the balloon or balloons.</p>
 					  <label for="oneBalloon">One Balloon</label><input id="oneBalloon" name="oneBalloon" type="radio" checked="checked">
 					  <label for="twoBalloons">Two Balloons</label><input id="twoBalloons" name="twoBalloons" type="radio">
 					  <button id="resetBalloon" name="resetBalloon" type="reset">Reset Balloon</button>
@@ -87,6 +92,7 @@
 			
 			    <fieldset>
 				  <legend tabindex="0">Wall Settings</legend>
+						<p>Explore with or without the presence of a wall.</p>
 				    <label for="removeWall">Remove Wall</label><input id="removeWall" name="removeWall" type="radio" checked="checked"></li>
 				   <label for="addWall">Add Wall</label><input id="addWall" name="addWall" type="radio">
 			   </fieldset> 
