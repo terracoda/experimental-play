@@ -15,8 +15,8 @@
 	</head>
 	<body>
 		<header role="banner">
-			<h1>Introducing Balloons and Static Electricity</h1>
-			<p class="description">The Play Area contains a woolly sweater on the left, a helium balloon in the middle, and a wall on the right. The charge of each object is represented by an even pattern of red circles with plus-signs and blue circles with minus-signs. Each object starts with equal amounts of positive and negative charges. The Control Panel contains settings to change views, add and remove objects and reset the experiment.</p>
+			<h1 aria-describedby="simDescription" tabindex="0">Introducing Balloons and Static Electricity</h1>
+			<p id="simDescription" class="description">The Play Area contains a woolly sweater on the left, a helium balloon in the middle, and a wall on the right. The charge of each object is represented by an even pattern of red circles with plus-signs and blue circles with minus-signs. Each object starts with equal amounts of positive and negative charges. The Control Panel contains settings to change views, add and remove objects and reset the experiment.</p>
 		</header>
 		<nav role="navigation">
 			<ul>
@@ -24,7 +24,7 @@
 				<li><a>Verbose Mode</a></li>
 			</ul> 
 		</nav>
-		<main> 
+		<main role="main"> 
 			<section>
 				<h2 aria-describedby="objPlayArea" tabindex="0">Play Area</h2>
 				<p id="objPlayArea">A helium balloon floats between a woolly sweater (left) and a wall (right).</p>
@@ -71,7 +71,7 @@
 						</div>
 			</section>
 			
-			<section >
+			<section>
 			  <form id="control-panel-form" role="form">
 				  <h2 tabindex="0">Control Panel</h2>
 			    <fieldset>
