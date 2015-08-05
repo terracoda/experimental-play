@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Balloons and Static Electricity</title>
+		<style>
+		*:focus, label:focus {
+			background-color: yellow;
+			padding: 0.25em;
+			border: 2px solid #000;
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+		<header role="banner">
+			<h1>Introducing Balloons and Static Electricity</h1>
+			<p class="description">The Play Area contains a woolly sweater on the left, a helium balloon in the middle, and a wall on the right. The charge of each object is represented by an even pattern of red circles with plus-signs and blue circles with minus-signs. Each object starts with equal amounts of positive and negative charges. The Control Panel contains settings to change views, add and remove objects and reset the experiment.</p>
+		</header>
+		<nav role="navigation">
+			<ul>
+				<li><a>Sim Speak</a></li>
+				<li><a>Verbose Mode</a></li>
+			</ul> 
+		</nav>
+		<main> 
+			<section>
+				<h2 aria-describedby="objPlayArea" tabindex="0">Play Area</h2>
+				<p id="objPlayArea">A helium balloon floats between a woolly sweater (left) and a wall (right).</p>
+			
+				<h3 aria-describedby="objDescSweater" tabindex="0">Sweater</h3>
+					<p id="objDescSweater">Large woolly sweater.</p>
+					<nav class="object-interactions" id="objIntSweater">
+						<ul>
+						  <li>Check the sweater's charge.</li>
+						</ul>
+					</nav> 	
+				
+					<h3 aria-describedby="objDescBalloon" tabindex="0">Balloon</h3>
+						<p id="objDescBalloon">Light yellow party balloon.</p>
+						<nav class="object-interaction" id="objIntSweater">
+							<ul>
+							  <li>Check the balloon's charge.</li>
+					 			<li>Grab the balloon</li>
+								<li>Move the balloon
+								  <ul>
+										<li>Indy control</li>
+										<li>Quick locations
+											<ul>
+												<li>Near the sweater</li>
+												<li>Over the sweater</li>
+												<li>Near the wall</li>
+												<li>Touching the sweater</li>
+										  </ul></li>  
+									 <li>Release the balloon</li>
+									</ul>    
+								</li>      
+					 		</ul>				 
+						</nav>         
+					                 
+					<h3 aria-describedby="objDescWall" tabindex="0">Wall</h3>
+						<p id="objDescWall">Just a stationary wall.</p>
+						<nav class="object-interaction" id="objIntWall">
+							<ul>
+							  <li>Check the wall's charge.</li>
+							</ul>
+						</nav>
+			</section>
+			
+			<section >
+			  <form id="control-panel-form" role="form">
+				  <h2 tabindex="0">Control Panel</h2>
+			    <fieldset>
+				  <legend tabindex="0">Charge Settings</legend>
+					  <label for="showCharges">Show all charges</label><input id="allCharges" name="showCharges" type="radio" checked="checked">
+					  <label for="hideCharges">Show no charges</label><input id="hideCharges" name="hideCharges" type="radio">
+					  <label for="showchargeDiffs">Show charge differences</label><input id="showchargeDiffs" name="showchargeDiffs"type="radio">
+			    </fieldset>
+			
+			    <fieldset>
+				  <legend tabindex="0">Balloon Settings</legend>
+					  <label for="oneBalloon">One Balloon</label><input id="oneBalloon" name="oneBalloon" type="radio" checked="checked">
+					  <label for="twoBalloons">Two Balloons</label><input id="twoBalloons" name="twoBalloons" type="radio">
+					  <button id="resetBalloon" name="resetBalloon" type="reset">Reset Balloon</button>
+				  </fieldset>
+			
+			    <fieldset>
+				  <legend tabindex="0">Wall Settings</legend>
+				    <label for="removeWall">Remove Wall</label><input id="removeWall" name="removeWall" type="radio" checked="checked"></li>
+				   <label for="addWall">Add Wall</label><input id="addWall" name="addWall" type="radio">
+			   </fieldset> 
+			 
+			    <button id="reset-sim" name="resetSim" type="reset">Reset Sim</button>
+			    </form>    
+			  </section>
+		</main>
+		
+		<footer role="contentinfo">
+			<h2>About PhET</h2>
+			<ul>
+				<li><a href="http://phet.colorado.edu/">PhET Website</a></li>
+				<li><a href="">About this Sim</a></li>
+			</ul>
+		</footer>
+	</body>
+</html>
+
