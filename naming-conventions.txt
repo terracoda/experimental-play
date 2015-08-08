@@ -1,0 +1,9 @@
+Naming Convention Notes
+
+Conventions for class and id names
+
+id names: using camel case as I am thinking that I would eventually need to use them for js stuff and not styling.
+
+class names: used longer dashed names, but have done any styling yet.
+= description: potentially used for all descriptions
+ 

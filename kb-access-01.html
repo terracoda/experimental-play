@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<title>Balloons and Static Electricity</title>
 		<style>
-		*:focus, label:focus {
+		*:focus {
 			background-color: yellow;
 			padding: 0.25em;
 			border: 2px solid #000;
@@ -19,11 +19,11 @@
 			<p id="simDescription" class="description">The Play Area contains a woolly sweater on the left, a helium balloon in the middle, and a wall on the right. The charge of each object is represented by an even pattern of red circles with plus-signs and blue circles with minus-signs. Each object starts with equal amounts of positive and negative charges. The Control Panel contains settings to change views, add and remove objects and reset the experiment.</p>
 		</header>
 		<div>
-			<h2 id="descModesMenu" class="hidden">Modes Menu</h2>
+			<h2 id="descModesMenu" tabindex="0">Modes Menu</h2>
 			<ul id="modesMenu" role="menu" aria-describedby="descModesMenu">
-				<li role="menuitem">Sim Speak</li>
-				<li role="menuitem">Verbose Descriptions</li>
-				<li role="menuitem">Sonfication</li>
+				<li role="menuitem">Show verbose descriptions?</li>
+				<li role="menuitem">Use speech interface? (Text)</li>
+				<li role="menuitem">Play sounds? (Sonfication?)</li>
 			</ul> 
 		</div>
 		<main role="main"> 
@@ -32,41 +32,42 @@
 				<p id="objPlayArea">A helium balloon floats between a woolly sweater (left) and a wall (right).</p>
 			
 				<h3 aria-describedby="objDescSweater" tabindex="0">Sweater</h3>
-					<p id="objDescSweater">Large woolly sweater.</p>
+					<p id="objDescSweater" class="description">Large woolly sweater.</p>
 					<div class="object-interactions">
-						<h4>Interactions</h4> 
+						<h4 tabindex="0">Sweater Interactions</h4> 
 						<ul>
 						  <li>Check the sweater's charge.</li>
 						</ul>
 					</div> 	
 				
 					<h3 aria-describedby="objDescBalloon" tabindex="0">Balloon</h3>
-						<p id="objDescBalloon">Light yellow party balloon.</p>
+						<p id="objDescBalloon" class="description">Light yellow party balloon.</p>
 						<div class="object-interaction">
-							<h4>Interactions</h4>
+							<h4 tabindex="0">Balloon Interactions</h4>
 							<ul>
 							  <li>Check the balloon's charge.</li>
 					 			<li>Grab the balloon</li>
+								<li>Release the balloon</li>
 								<li>Move the balloon
 								  <ul>
-										<li>Indy control</li>
-										<li>Quick locations
+										<li>Independently</li>
+										<li>To Quick Locations
 											<ul>
 												<li>Near the sweater</li>
 												<li>Over the sweater</li>
 												<li>Near the wall</li>
 												<li>Touching the wall</li>
+												<li>Back to center</li>
 										  </ul></li>  
-									 <li>Release the balloon</li>
 									</ul>    
 								</li>      
 					 		</ul>				 
 						</div>         
 					                 
 					<h3 aria-describedby="objDescWall" tabindex="0">Wall</h3>
-						<p id="objDescWall">Just a stationary wall.</p>
+						<p id="objDescWall" class="description">A stationary wall.</p>
 						<div class="object-interaction">
-							<h4>Interactions</h4> 
+							<h4 tabindex="0">Wall Interactions</h4> 
 							<ul>
 							  <li>Check the wall's charge.</li>
 							</ul>
@@ -74,7 +75,7 @@
 			</section>
 			
 			<section>
-			  <form id="control-panel-form" role="form">
+			  <form id="cpanelForm" role="form">
 				  <h2 tabindex="0">Control Panel</h2>
 			    <fieldset aria-describedby="setDescCharges">
 				  <legend tabindex="0">Charge Settings</legend>
@@ -100,7 +101,7 @@
 			   </fieldset> 
 			 
 			    <button id="resetSim" aria-label="Reset" aria-describedby="descReset" name="resetSim" type="reset">R</button>
-					<p id="descReset">Resetting the simulation returns the charge of all objects in the Play to their original state.</p>
+					<p id="descReset">Resetting the simulation returns the charge of all objects in the Play Area to their original state.</p>
 			    </form>    
 			  </section>
 		</main>
