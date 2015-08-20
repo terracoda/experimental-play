@@ -6,4 +6,8 @@ id names: using camel case as I am thinking that I would eventually need to use 
 
 class names: used longer dashed names, but have done any styling yet.
 = description: potentially used for all descriptions
- 
+               
+                        Managing focus inside groups
+When a user tabs away from a widget and returns, focus should return to the specific element that had focus, for example, the tree item or grid cell. There are two techniques for accomplishing this:
+Roving tabindex: programmatically moving focus
+aria-activedescendent: managing a 'virtual' focus
