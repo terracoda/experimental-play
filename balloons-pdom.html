@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Balloons and Static Electricity</title>
+		<!-- Jesse: These styles are just to give you an idea of how this works! 
+		They are not to be used.  -->
+		<style>
+		*:focus {
+			background-color: yellow;
+			padding: 0.25em;
+			border: 2px solid #000;
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+		<header role="banner" aria-labeledby="scene-title" aria-describedby="scene-description" tabindex="0">
+			<h1 id="sim-title" tabindex="0">Balloons &amp; Static Electricity</h1>
+			<div id="sim-description">
+				<p>A balloon floats evenly between a large woolly sweater and a removable wall. The top of the balloon is level with the sweater just below the shoulder.</p> 
+				<p>Each object shows negative and positive charges. Charges are shown in pairs. Currently, the sweater and the wall have a lot charges, the balloon, just a few.</p>
+				<p>Below these objects there are controls to add a second balloon, adjust charge views are to reset the entire experiment.</p>
+				<p>Tab for balloon. Select K or question mark for keyboard help. Select H for list of the heading  outline.</p>
+		</div>
+		</header>
+		<main role="main"> 
+			<section aria-labelledby="pa-title" aria-describedby="pa-description">
+				<h2 id="pa-title"tabindex="0">Play Area</h2>
+				<p id="pa-description">Contains the sweater, a balloon and the wall.</p>
+			
+				<h3 aria-describedby="sweater-description">Sweater</h3>
+					<p id="sweater-description">Has a neutral charge with no more positive charges than negative ones.</p>	
+				
+					<h3 aria-describedby="balloon-description" tabindex="0">Balloon</h3>
+						<div id="balloon-description">
+							<p>The balloon has no more negative charges than positive ones.</p>
+							<p>Positioned evenly between sweater and wall, the top of the balloon is level with the sweater just below the shoulder.</p>
+							<p>Select any Arrow key to grab and drag the balloon. Tab for next item. K or question mark for keyboard help.</p>
+						</div>
+					<!-- Jesse. We discussed a Toggle Button for the Wall -->   	                 
+					<button aria-pressed="false" aria-describedby="wall-button-description">Remove Wall</button>
+					<!--<button aria-pressed="true" aria-describedby="wall-button-description">Add Wall</button>-->
+					<p id="wall-button-description">Select to conduct experiments with or without the wall.</p>
+			</section>
+			
+			<section>
+			  <form id="cp-form" role="form" aria-labeledby="cp-title">
+				  <h2 id="cp-title" tabindex="0">Control Panel</h2>
+			    <fieldset aria-labeledby="cs-title" aria-describedby="cs-description">
+				  <legend id="cs-title" tabindex="0">Charge Settings</legend>
+						<p id="cs-description">Select how </p>
+					  <label for="show-charges">Show all charges</label>
+					   <input id="show-charges" name="charge-settings" value="show-all" type="radio" checked aria-checked="true">
+					
+					  <label for="show-no-charges">Show no charges</label>
+					   <input id="show-no-charges" name="charge-settings" value="show-none" type="radio" aria-checked="false">
+					
+					  <label for="show-charge-diffs">Show charge differences</label>
+					   <input id="show-charge-diffs" name="charge-settings" value="show-differences" type="radio" aria-checked="false">
+						
+						<p id="cs-description">Select how you want to see or hear the charges.</p>
+			    </fieldset>
+			
+			    <fieldset aria-labeledby="bs-title">
+				  <legend id="bs-title" tabindex="0">Balloon Buttons</legend>
+					<!-- Jesse, visually this button looks like two, but semantically I think it can be one. If this is problem, we can make two separate Toggle. Pressing anywhere on either button would toggle the button, simplifying the itneraction. -->   	                 
+					<button label="Add second balloon" aria-pressed="false" aria-describedby="balloon-button-description">Add second balloon</button>
+					<button label="Remove second balloon" aria-pressed="true" aria-describedby="balloon-button-description">Remove second balloon</button>
+					<p id="bs-description">Select to conduct experiments with one or two balloons present.</p>
+					  <button id="resetBalloon" name="resetBalloon" type="reset">Reset Balloon</button>
+				  </fieldset>
+			
+			    <fieldset aria-describedby="descWallSet">
+				  <legend tabindex="0">Wall Settings</legend>
+						<p id="descWallSet" class="description">Explore the simulation with or without the presence of a wall.</p>
+				    <label for="removeWall">Remove Wall</label><input id="removeWall" name="removeWall" type="radio" checked="checked">
+				    <label for="addWall">Add Wall</label><input id="addWall" name="addWall" type="radio">
+			    </fieldset> 
+			 
+			    <button id="resetSim" aria-label="Reset" aria-describedby="descReset" name="resetSim" type="reset">R</button>
+					<p id="descReset">Resetting the simulation returns the charge of all objects in the Play Area to their original state.</p>
+			    </form>    
+			  </section>
+		</main>
+		
+		<footer role="contentinfo">
+			<h2>About PhET</h2>
+			<ul>
+				<li><a href="http://phet.colorado.edu/">PhET Website</a></li>
+				<li><a href="">About this Sim</a></li>
+			</ul>
+		</footer>
+	</body>
+</html>
