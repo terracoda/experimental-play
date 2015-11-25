@@ -48,9 +48,9 @@
 			<section>
 			  <form id="cp-form" role="form" aria-labeledby="cp-title">
 				  <h2 id="cp-title" tabindex="0">Control Panel</h2>
-			    <fieldset aria-labeledby="cs-title" aria-describedby="cs-description">
+				  <!-- Jesse, a div and h3 should also work fine -->
+			    <fieldset role="radiogroup" aria-labeledby="cs-title" aria-describedby="cs-description">
 				  <legend id="cs-title" tabindex="0">Charge Settings</legend>
-						<p id="cs-description">Select how </p>
 					  <label for="show-charges">Show all charges</label>
 					   <input id="show-charges" name="charge-settings" value="show-all" type="radio" checked aria-checked="true">
 					
@@ -64,22 +64,19 @@
 			    </fieldset>
 			
 			    <fieldset aria-labeledby="bs-title">
-				  <legend id="bs-title" tabindex="0">Balloon Buttons</legend>
-					<!-- Jesse, visually this button looks like two, but semantically I think it can be one. If this is problem, we can make two separate Toggle. Pressing anywhere on either button would toggle the button, simplifying the itneraction. -->   	                 
-					<button label="Add second balloon" aria-pressed="false" aria-describedby="balloon-button-description">Add second balloon</button>
-					<button label="Remove second balloon" aria-pressed="true" aria-describedby="balloon-button-description">Remove second balloon</button>
-					<p id="bs-description">Select to conduct experiments with one or two balloons present.</p>
-					  <button id="resetBalloon" name="resetBalloon" type="reset">Reset Balloon</button>
+				  <legend id="bs-title" tabindex="0">Balloon Controls</legend>
+					<!-- Jesse, visually this button looks like two, but semantically I think it can be one. If this is problem, we can make two separate toggle buttons. Pressing anywhere on either button would toggle the button, simplifying the interaction. -->   	                 
+					<button aria-label="Add second balloon" aria-pressed="false" aria-describedby="bs-description">[Two balloons image]</button>
+					<!-- <button label="Remove second balloon" aria-pressed="true">>[Single balloon image]</button> -->
+					<p id="bs-description">Select to conduct experiments two balloons or just one.</p>  
+			 
+					 <button id="balloon-reset" name="balloon-reset" type="reset" aria-describedby="balloon-reset-description">Reset Balloon</button>
+					<p>Select to return balloon(s) initial position and uncharged state.</p> 
+				 
 				  </fieldset>
 			
-			    <fieldset aria-describedby="descWallSet">
-				  <legend tabindex="0">Wall Settings</legend>
-						<p id="descWallSet" class="description">Explore the simulation with or without the presence of a wall.</p>
-				    <label for="removeWall">Remove Wall</label><input id="removeWall" name="removeWall" type="radio" checked="checked">
-				    <label for="addWall">Add Wall</label><input id="addWall" name="addWall" type="radio">
-			    </fieldset> 
 			 
-			    <button id="resetSim" aria-label="Reset" aria-describedby="descReset" name="resetSim" type="reset">R</button>
+			    <button id="sim-reset" aria-label="Reset" aria-describedby="sim-reset-description" name="sim-reset" type="reset">[Reset Image]</button>
 					<p id="descReset">Resetting the simulation returns the charge of all objects in the Play Area to their original state.</p>
 			    </form>    
 			  </section>
