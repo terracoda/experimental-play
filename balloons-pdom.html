@@ -18,7 +18,7 @@
 		<!-- header: sets the scene with the scene label and scene description -->
 		<header>
 			<h1>The Scene for Balloons &amp; Static Electricity</h1> 
-			<!-- General scene description dynamically-->
+			<!-- General scene description for page load. Parts will need change dynamically once I figure that out.-->
 			<div id="scene-decription">
 				<p>A balloon floats evenly between a large woolly sweater and a removable wall.</p> 
 				<p>Each object shows negative and positive charges. Charges are shown in pairs. Currently, the sweater and the wall have many pairs of charges, the balloon, just a few.</p>
@@ -35,15 +35,17 @@
 				<!-- Sweater is not in the tab order, but needs to be a live region, so changes in charges are communicated. -->
 				<div id="sweater-widget" aria-labelledby="sweater-label" aria-describedby="balloon-description">
 					<h3 id="sweater-label">Sweater</h3>
+					<!-- Sweater charge information changes and will need to be associated with the balloon widget some how. -->
 					<p id="sweater-description">The sweater has a neutral charge, no more positive charges than negative ones.</p>
 				</div>	
 				
 					<div id="balloon-widget" aria-labelledby="balloon-label" aria-describedby="balloon-description" tabindex="0">
 						<h3 id="balloon-label">Balloon</h3>
+						<!-- Parts of the Balloon description change dynamically. Let's discuss this further. Multiple ids can be associated in aria-describedby. --> 
 						<div id="balloon-description">
-							<p>The balloon has a neutral charge, no more negative charges than positive ones.</p>
-							<p>Currently, positioned at equal distance between sweater and wall, the top of the balloon is level with the chest area of the sweater.</p>
-							<p>Select any Arrow key to grab the balloon and start dragging. Select Tab for next item. Select K or question mark for keyboard help.</p>
+							<p id="balloon-charge">The balloon has a neutral charge, no more negative charges than positive ones.</p>
+							<p id="balloon-position">Currently, positioned at equal distance between sweater and wall, the top of the balloon is level with the chest area of the sweater.</p>
+							<p id="balloon-nav-help">Select any Arrow key to grab the balloon and start dragging. Select Tab for next item. Select K or question mark for keyboard help.</p>
 							</div>
 					 </div>
 
