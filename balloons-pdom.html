@@ -14,12 +14,13 @@
 		</style> 	                                                       
 	</head>
 	<body>
-		<!-- Jesse, note redundancy in aria landmark roles and native html roles is intentional. Using both is debatable, but it is also allowed as AT catches up with HTML5 semantics.-->
-		<!-- header: sets the scene with the scene label and scene description -->
-		<header>
-			<h1>The Scene for Balloons &amp; Static Electricity</h1> 
+		<!-- Jesse, note redundancy in aria landmark roles and native html roles is intentional. Using both is debatable, but it is also allowed as AT catches up with HTML5 semantics. -->
+		<!-- header: sets the scene with the h1 and the scene description. --> 
+		<!-- Note h1 content is intentionally different from the page title. --> 
+		<header role="banner" aria-labelledby="scene-label" aria-describedby="scene-description">
+			<h1 id="scene-label">The Scene for Balloons &amp; Static Electricity</h1> 
 			<!-- General scene description for page load. Parts will need change dynamically once I figure that out.-->
-			<div id="scene-decription">
+			<div id="scene-description">
 				<p>A balloon floats evenly between a large woolly sweater and a removable wall.</p> 
 				<p>Each object shows negative and positive charges. Charges are shown in pairs. Currently, the sweater and the wall have many pairs of charges, the balloon, just a few.</p>
 				<p>The control panel has controls to add a second balloon, adjust charge views and to reset the entire experiment.</p>
