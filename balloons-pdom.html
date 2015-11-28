@@ -21,7 +21,7 @@
 			<h1 id="scene-label">The Scene for Balloons &amp; Static Electricity</h1> 
 			<!-- General scene description for page load. Parts will need change dynamically once I figure that out.-->
 			<div id="scene-description">
-				<p>A balloon floats evenly between a large woolly sweater and a removable wall.</p> 
+				<p>A balloon floats evenly between a large woolly sweater and a removable wall. The sweater is to the left and the wall is to the right.</p> 
 				<p>Each object shows negative and positive charges. Charges are shown in pairs. Currently, the sweater and the wall have many pairs of charges, the balloon, just a few.</p>
 				<p>The control panel has controls to add a second balloon, adjust charge views and to reset the entire experiment.</p>
 				<p>Select Tab for next item. Select K or question mark for keyboard help. Select H for a heading outline.</p>
@@ -31,8 +31,6 @@
 		<!-- Play Area-->
 			<section id="play-area">
 				<h2 id="pa-label">Play Area</h2>                                           	
-				<p id="pa-description">Contains the sweater, a balloon and the wall.</p>
-			  
 				<!-- Sweater is not in the tab order, but needs to be a live region, so changes in charges are communicated. -->
 				<div id="sweater-widget" aria-labelledby="sweater-label" aria-describedby="balloon-description">
 					<h3 id="sweater-label">Sweater</h3>
@@ -45,12 +43,15 @@
 						<!-- Parts of the Balloon description change dynamically. Let's discuss this further. Multiple ids can be associated in aria-describedby. --> 
 						<div id="balloon-description">
 							<p id="balloon-charge">The balloon has a neutral charge, no more negative charges than positive ones.</p>
-							<p id="balloon-position">Currently, positioned at equal distance between sweater and wall, the top of the balloon is level with the chest area of the sweater.</p>
+							<p id="balloon-position">Currently, positioned at equal distance between sweater and wall. The sweater is to the left and the wall is to the right. The top of the balloon is level with the chest area of the sweater.</p> 
 							<p id="balloon-nav-help">Select any Arrow key to grab the balloon and start dragging. Select Tab for next item. Select K or question mark for keyboard help.</p>
 							</div>
 					 </div>
 
 					<div id="wall-widget">
+						<h3 id="wall-label">Wall</h3>
+						<!-- Wall charge information changes and will need to be associated with the balloon widget some how. -->
+						<p id="wall-description">The wall has a neutral charge, no more positive charges than negative ones.</p>
 						<!-- Jesse. We discussed a Toggle Button for the Wall -->
 						<!-- If the button text is an image, use aria-label="Remove Wall" and aria-label="Add Wall". -->  	                 
 						<button aria-pressed="true" aria-describedby="wall-button-description">Remove Wall</button>
@@ -60,16 +61,15 @@
 			</section>
 			
 			<!-- Control Panel -->
-			<section>
-			  <form id="cp-form" role="form" aria-labelledby="cp-label">
-				  <h2 id="cp-label">Control Panel</h2>
-				  <!-- Jesse, a div and h3 should also work in place of the fieldset and the legend. -->
-			    <fieldset role="radiogroup" aria-describedby="cs-label cs-description">
+			<section id="control-panel">
+			  <h2 id="cp-label">Control Panel</h2>
+				  <!-- Jesse, a div and h3 could also work in place of the fieldset and the legend. -->
+			    <fieldset id="charge-view-widget" role="radiogroup" aria-describedby="cs-label cs-description">
 				  <legend id="cs-label">Charge Settings</legend>		  
 					  <label for="show-charges">Show all charges</label>
 						<!-- Jesse, again, note redundancy in aria-checked and native HTML5 checked. -->
 						<!-- Note the name attribute value is the same for each, as only one value is submitted. -->
-						<!-- Jesse, arrow keys go between radios and spacebar to select -->
+						<!-- Jesse, arrow keys go between radios in a radiogroup and spacebar to select -->
 					   <input id="show-charges" name="charge-settings" value="show-all" type="radio" role="radio" aria-checked="true">
 					
 					  <label for="show-no-charges">Show no charges</label>
@@ -80,7 +80,7 @@
 					  <p id="cs-description">Select how you want to see or hear the charges.</p>
 			    </fieldset> 	                                                   
 					
-			    <fieldset role="group" aria-describedby="bs-label bs-description">
+			    <fieldset id="balloon-controls-widget" role="group" aria-describedby="bs-label bs-description">
 				  	<legend id="bs-label">Balloon Controls</legend>
 					<!-- Jesse, visually this button looks like two, but semantically I think it can be one. If this is problem, just make two separate toggle buttons. If you stick with one toggle button, pressing anywhere on either button would toggle the button which simplifies the interaction. -->   	                 
 							<button aria-label="Add second balloon" aria-pressed="false" aria-describedby="bs-description">[Image with single balloon pressed and two balloons not pressed]</button>
@@ -91,15 +91,16 @@
 					<p id="balloon-reset-description">Select to return balloon(s) to initial position and an uncharged state.</p>  
 				  </fieldset>
 			    
-					<!-- Jesse, note use of aria-label here as not words are the reset button. -->
-			    <button id="sim-reset" aria-label="Reset" aria-describedby="sim-reset-description" name="sim-reset" type="reset">[Reset Image]</button>
-					<p id="sim-reset-description">Select to reset entire experiment to original state.</p>  
-			    </form>
+					<div id="sim-reset-widget">
+					  <!-- Jesse, note use of aria-label here as not words are the reset button. -->
+			      <button id="sim-reset" aria-label="Reset" aria-describedby="sim-reset-description" name="sim-reset" type="reset">[Reset Image]</button>
+					  <p id="sim-reset-description">Select to reset entire experiment to original state.</p>
+					</div>  
 			  </section>
 		</main>
 		
 		<footer role="contentinfo" aria-labelledby="about-label">
-			<nav aria-labelledby="about-label">
+			<nav>
 			  <h2 id="about-label">About the PhET Project</h2>
 					<ul>
 						<li><a href="http://phet.colorado.edu/">PhET Website</a></li>
