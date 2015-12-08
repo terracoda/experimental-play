@@ -52,17 +52,19 @@
 						<h3 id="wall-label">Wall</h3>
 						<!-- Wall charge information changes and will need to be associated with the balloon widget some how. -->
 						<p id="wall-description">The wall has a neutral charge, no more positive charges than negative ones.</p>
-						<!-- Jesse. We discussed a Toggle Button for the Wall -->
-						<!-- If the button text is an image, use aria-label="Remove Wall" and aria-label="Add Wall". -->  	                 
-						<button aria-pressed="true" aria-describedby="wall-button-description">Remove Wall</button>
-					 <!-- <button aria-pressed="true" aria-describedby="wall-button-description">Add Wall</button> -->
-							<p id="wall-button-description">Toggle to conduct experiments with or without the wall.</p>
+ 	  		
 					</div>
 			</section>
 			
 			<!-- Control Panel -->
 			<section id="control-panel">
 			  <h2 id="cp-label">Control Panel</h2>
+			  <!-- Jesse. We discussed a Toggle Button for the Wall -->
+				<!-- If the button text is an image, use aria-label="Remove Wall" and aria-label="Add Wall". -->  	                 
+				<button aria-pressed="true" aria-describedby="wall-button-description">Remove Wall</button>
+			 <!-- <button aria-pressed="true" aria-describedby="wall-button-description">Add Wall</button> -->
+					<p id="wall-button-description">Toggle to conduct experiments with or without the wall.</p>
+					
 				  <!-- Jesse, a div and h3 could also work in place of the fieldset and the legend. -->
 			    <fieldset id="charge-view-widget" role="radiogroup" aria-describedby="cs-label cs-description">
 				  <legend id="cs-label">Charge Settings</legend>		  
