@@ -21,18 +21,15 @@
 			<h1 id="scene-label">The Scene for Balloons &amp; Static Electricity</h1> 
 			<!-- General scene description for page load. Parts will need change dynamically once I figure that out.-->
 			<div id="scene-description">
-				<p>A balloon floats in the middle of a Play Area between a woolly sweater and a removable wall.
-				Each object shows negative and positive charges. Charges are shown in pairs. Currently, the sweater and wall have many pairs of charges, the balloon, just a few.</p>
-				<p>Below the Play Area, a control panel has controls to turn wall off and on, add a second balloon, and adjust charge views. You can also reset the entire experiment.</p>
-				
+				<p>A balloon floats in the middle of a Play Area between a woolly sweater and a removable wall. Each object shows negative and positive charges. Charges are shown in pairs. Currently, the sweater and wall have many pairs of charges, the balloon, just a few.</p>
+				<p>Below the Play Area, a control panel has controls to turn wall off and on, add a second balloon, and adjust charge views. You can also reset the entire experiment.</p> 	
 				<p>Select Tab for next item. Select question mark for keyboard help.</p>
 		</div>
 		</header>
 		<!-- Play Area-->
 			<section id="play-area" aria-labelledby="pa-label" aria-describedby="pa-description">
 				<h2 id="pa-label">Play Area</h2>
-				<p id="pa-description">Place to experiment with balloons, sweater and wall.</p>
-				</p>                                          	
+				<p id="pa-description">Place to experiment with balloons, sweater and wall.</p>                                         	
 				<!-- Sweater is not in the tab order, but needs to be a live region, so changes in charges are communicated. -->
 				<div id="sweater-widget" aria-labelledby="sweater-label" aria-describedby="balloon-description">
 					<h3 id="sweater-label">Sweater</h3>
@@ -53,8 +50,7 @@
 					<div id="wall-widget">
 						<h3 id="wall-label">Wall</h3>
 						<!-- The actual visual Wall is not in the tab order. The Wall button is. Wall charge information changes and will need to be associated with the balloon descriptions some how. -->
-						<p id="wall-description">The wall has a neutral charge, no more positive charges than negative ones.</p>
- 	  		
+						<p id="wall-description">The wall has a neutral charge, no more positive charges than negative ones.</p> 
 					</div>
 			</section>
 			
@@ -69,18 +65,16 @@
 					
 				  <!-- Jesse, a div and h3 could also work in place of the fieldset and the legend. -->
 			    <fieldset id="charge-view-widget" role="radiogroup" aria-describedby="cs-label cs-description">
-				  <legend id="cs-label">Charge Settings</legend>		  
-					  <label for="show-charges">Show all charges</label>
-						<!-- Jesse, again, note redundancy in aria-checked and native HTML5 checked. -->
-						<!-- Note the name attribute value is the same for each, as only one value is submitted. -->
-						<!-- Jesse, arrow keys go between radios in a radiogroup and spacebar to select -->
-					   <input id="show-charges" name="charge-settings" value="show-all" type="radio" role="radio" aria-checked="true">
+				  <legend id="cs-label">Charge Settings</legend>
+					<!-- Jesse, again, note redundancy in aria-checked and native HTML5 checked. -->
+					<!-- Note the name attribute value is the same for each, as only one value is submitted. -->
+					<!-- Jesse, arrow keys go between radios in a radiogroup and spacebar to select --> 	  
+					  <label for="show-charges">Show all charges <input id="show-charges" name="charge-settings" value="show-all" type="radio" role="radio" aria-checked="true"></label>
+										
+					  <label for="show-no-charges">Show no charges <input id="show-no-charges" name="charge-settings" value="show-none" type="radio" role="radio" aria-checked="false"></label>
 					
-					  <label for="show-no-charges">Show no charges</label>
-					   <input id="show-no-charges" name="charge-settings" value="show-none" type="radio" role="radio" aria-checked="false">
-					
-					  <label for="show-charge-diffs">Show charge differences</label>
-					   <input id="show-charge-diffs" name="charge-settings" value="show-differences" type="radio" role="radio" aria-checked="false"> 								
+					  <label for="show-charge-diffs">Show charge differences  <input id="show-charge-diffs" name="charge-settings" value="show-differences" type="radio" role="radio" aria-checked="false"></label>
+					   								
 					  <p id="cs-description">Select how you want to see or hear the charges.</p>
 			    </fieldset> 	                                                   
 					
