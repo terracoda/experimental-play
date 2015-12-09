@@ -21,19 +21,22 @@
 			<h1 id="scene-label">The Scene for Balloons &amp; Static Electricity</h1> 
 			<!-- General scene description for page load. Parts will need change dynamically once I figure that out.-->
 			<div id="scene-description">
-				<p>A balloon floats evenly between a large woolly sweater and a removable wall. The sweater is to the left and the wall is to the right.</p> 
-				<p>Each object shows negative and positive charges. Charges are shown in pairs. Currently, the sweater and the wall have many pairs of charges, the balloon, just a few.</p>
-				<p>The control panel has controls to add a second balloon, adjust charge views and to reset the entire experiment.</p>
-				<p>Select Tab for next item. Select K or question mark for keyboard help. Select H for a heading outline.</p>
+				<p>A balloon floats in the middle of a Play Area between a woolly sweater and a removable wall.
+				Each object shows negative and positive charges. Charges are shown in pairs. Currently, the sweater and wall have many pairs of charges, the balloon, just a few.</p>
+				<p>Below the Play Area, a control panel has controls to turn wall off and on, add a second balloon, and adjust charge views. You can also reset the entire experiment.</p>
+				
+				<p>Select Tab for next item. Select question mark for keyboard help.</p>
 		</div>
 		</header>
 		<!-- Play Area-->
-			<section id="play-area">
-				<h2 id="pa-label">Play Area</h2>                                           	
+			<section id="play-area" aria-labelledby="pa-label" aria-describedby="pa-description">
+				<h2 id="pa-label">Play Area</h2>
+				<p id="pa-description">Place to experiment with balloons, sweater and wall.</p>
+				</p>                                          	
 				<!-- Sweater is not in the tab order, but needs to be a live region, so changes in charges are communicated. -->
 				<div id="sweater-widget" aria-labelledby="sweater-label" aria-describedby="balloon-description">
 					<h3 id="sweater-label">Sweater</h3>
-					<!-- Sweater charge information changes and will need to be associated with the balloon widget some how. -->
+					<!-- Sweater charge information changes and will need to be associated with the balloon descriptions some how. -->
 					<p id="sweater-description">The sweater has a neutral charge, no more positive charges than negative ones.</p>
 				</div>	
 				
@@ -43,13 +46,13 @@
 						<div id="balloon-description">
 							<p id="balloon-charge">The balloon has a neutral charge, no more negative charges than positive ones.</p>
 							<p id="balloon-position">Currently, positioned at equal distance between sweater and wall. The sweater is to the left and the wall is to the right. The top of the balloon is level with the chest area of the sweater.</p> 
-							<p id="balloon-nav-help">Select any Arrow key to grab the balloon and start dragging. Select Tab for next item. Select K or question mark for keyboard help.</p>
+							<p id="balloon-nav-help">Select any Arrow key to grab the balloon and start dragging. Select Tab for next item. Select question mark for keyboard help.</p>
 							</div>
 					 </div>
 
 					<div id="wall-widget">
 						<h3 id="wall-label">Wall</h3>
-						<!-- Wall charge information changes and will need to be associated with the balloon widget some how. -->
+						<!-- The actual visual Wall is not in the tab order. The Wall button is. Wall charge information changes and will need to be associated with the balloon descriptions some how. -->
 						<p id="wall-description">The wall has a neutral charge, no more positive charges than negative ones.</p>
  	  		
 					</div>
