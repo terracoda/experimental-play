@@ -73,24 +73,24 @@
 										
 					  <label for="show-no-charges">Show no charges <input id="show-no-charges" name="charge-settings" value="show-none" type="radio" role="radio" aria-checked="false"></label>
 					
-					  <label for="show-charge-diffs">Show charge differences  <input id="show-charge-diffs" name="charge-settings" value="show-differences" type="radio" role="radio" aria-checked="false"></label>
+					  <label for="show-charge-diffs">Show charge differences <input id="show-charge-diffs" name="charge-settings" value="show-differences" type="radio" role="radio" aria-checked="false"></label>
 					   								
 					  <p id="cs-description">Select how you want to see or hear the charges.</p>
 			    </fieldset> 	                                                   
 					
 			    <fieldset id="balloon-controls-widget" role="group" aria-describedby="bs-label bs-description">
-				  	<legend id="bs-label">Balloon Controls</legend>
-					<!-- Jesse, visually this button looks like two, but semantically I think it can be one. If this is problem, just make two separate toggle buttons. If you stick with one toggle button, pressing anywhere on either button would toggle the button which simplifies the interaction. -->   	                 
-							<button aria-label="Add second balloon" aria-pressed="false" aria-describedby="bs-description">[Image with single balloon pressed and two balloons not pressed]</button>
-							<!-- <button label="Remove second balloon" aria-pressed="true">[Image with single balloon not pressed and two balloons pressed]</button> -->
-							<p id="bs-description">Toggle to conduct experiments with two balloons or just one.</p>  
+				  	<legend id="bs-label">Balloon Settings</legend>
+					  <!-- Jesse, note use of aria-label here as no words are the actual buttons in the UI. -->   	                 
+							<input id="show-single-balloon" name="show-balloons" value="single-balloon-exp" type="radio" role="radio" aria-label="Experiment with one balloon." aria-checked="false">
+							<input id="show-two-balloons" name="show-balloons" value="two-balloon-exp" type="radio" role="radio" aria-label="Experiment with two balloons" aria-checked="false">
 			 
 					 <button id="balloon-reset" name="balloon-reset" type="reset" aria-describedby="balloon-reset-description">Reset Balloon</button>
+					<!--<button id="balloon-reset" name="balloon-reset" type="reset" aria-describedby="balloon-reset-description">Reset Balloons</button>-->
 					<p id="balloon-reset-description">Select to return balloon(s) to initial position and an uncharged state.</p>  
 				  </fieldset>
 			    
 					<div id="sim-reset-widget">
-					  <!-- Jesse, note use of aria-label here as not words are the reset button. -->
+					  <!-- Jesse, note use of aria-label here as no words are the reset button. -->
 			      <button id="sim-reset" aria-label="Reset" aria-describedby="sim-reset-description" name="sim-reset" type="reset">[Reset Image]</button>
 					  <p id="sim-reset-description">Select to reset entire experiment to original state.</p>
 					</div>  
