@@ -14,48 +14,48 @@
 		</style> 	                                                       
 	</head>
 	<body>
-		<!-- Jesse, note redundancy in aria landmark roles and native html roles is intentional. Using both is debatable, but it is also allowed as AT catches up with HTML5 semantics. -->
+		<!-- Jesse, note redundancy in aria landmark roles and native html roles is intentional. Using both is debatable, but permissible as AT catches up with HTML5 semantics. -->
 		<!-- header: sets the scene with the h1 and the scene description. --> 
 		<!-- Note h1 content is intentionally different from the page title. --> 
 		<header role="banner" aria-labelledby="scene-label" aria-describedby="scene-description">
-			<h1 id="scene-label">The Scene for Balloons &amp; Static Electricity</h1> 
+			<h1 id="scene-label">Scene Summary</h1> 
 			<!-- General scene description for page load. Parts will need change dynamically once I figure that out.-->
-			<div id="scene-description">
-				<p>A balloon floats in the middle of a Play Area between a woolly sweater and a removable wall. Each object shows negative and positive charges. Charges are shown in pairs. Currently, the sweater and wall have many pairs of charges, the balloon, just a few.</p>
-				<p>Below the Play Area, a control panel has controls to turn wall off and on, add a second balloon, and adjust charge views. You can also reset the entire experiment.</p> 	
-				<p>Select Tab for next item. Select question mark for keyboard help.</p>
-		</div>
+			<p id="scene-description">
+				<span id="pload-pa-description">A balloon floats in the middle of a Play Area between a woolly sweater and a removable wall. Each object shows negative and positive charges. Charges are shown in pairs. Currently, the sweater and wall have many pairs of charges, the balloon, just a few.</span>
+				<span id="pload-cp-description">Below the Play Area, a Control Panel allows you to add and remove objects, adjust charge views and to reset the entire experiment.</span> 	
+				<span id="pload-nav-cue">Select Tab for next item. Select question mark for keyboard help.</span>
+		</p>
 		</header>
 		<!-- Play Area-->
-			<section id="play-area" aria-labelledby="pa-label" aria-describedby="pa-description">
+			<section role="region" id="play-area" aria-labelledby="pa-label" aria-describedby="pa-description">
 				<h2 id="pa-label">Play Area</h2>
 				<p id="pa-description">Place to experiment with balloons, sweater and wall.</p>                                         	
 				<!-- Sweater is not in the tab order, but needs to be a live region, so changes in charges are communicated. -->
-				<div id="sweater-widget" aria-labelledby="sweater-label" aria-describedby="balloon-description">
+				<div id="sweater-widget" aria-labelledby="sweater-label" aria-describedby="sweater-description">
 					<h3 id="sweater-label">Sweater</h3>
 					<!-- Sweater charge information changes and will need to be associated with the balloon descriptions some how. -->
 					<p id="sweater-description">The sweater has a neutral charge, no more positive charges than negative ones.</p>
 				</div>	
 				
-					<div id="balloon-widget" aria-labelledby="balloon-label" aria-describedby="balloon-description" tabindex="0">
+					<div role="slider" id="balloon-widget" aria-labelledby="balloon-label" aria-describedby="balloon-description" tabindex="0">
 						<h3 id="balloon-label">Balloon</h3>
 						<!-- Parts of the Balloon description change dynamically. Let's discuss this further. Multiple ids can be associated in aria-describedby. --> 
-						<div id="balloon-description">
-							<p id="balloon-charge">The balloon has a neutral charge, no more negative charges than positive ones.</p>
-							<p id="balloon-position">Currently, positioned at equal distance between sweater and wall. The sweater is to the left and the wall is to the right. The top of the balloon is level with the chest area of the sweater.</p> 
-							<p id="balloon-nav-help">Select any Arrow key to grab the balloon and start dragging. Select Tab for next item. Select question mark for keyboard help.</p>
-							</div>
+						<p id="balloon-description">
+							<span id="balloon-charge">The balloon has no more negative charges than positive ones.</span>
+							<span id="balloon-position">Currently, positioned at equal distance between sweater and wall. The sweater is to the left and the wall is to the right. The top of the balloon is level with the chest area of the sweater.</span> 
+							<span id="balloon-nav-help">Select any Arrow key to grab the balloon and start dragging. Select Tab for next item. Select question mark for keyboard help.</span>
+							</p>
 					 </div>
 
 					<div id="wall-widget">
 						<h3 id="wall-label">Wall</h3>
 						<!-- The actual visual Wall is not in the tab order. The Wall button is. Wall charge information changes and will need to be associated with the balloon descriptions some how. -->
-						<p id="wall-description">The wall has a neutral charge, no more positive charges than negative ones.</p> 
+						<p id="wall-description">The wall has no more positive charges than negative ones.</p> 
 					</div>
 			</section>
 			
 			<!-- Control Panel -->
-			<section id="control-panel">
+			<section role="region" id="control-panel" aria-labelledby="cp-label">
 			  <h2 id="cp-label">Control Panel</h2>
 			  <!-- Jesse. We discussed a Toggle Button for the Wall -->
 				<!-- If the button text is an image, use aria-label="Remove Wall" and aria-label="Add Wall". -->  	                 
