@@ -21,22 +21,22 @@
 			<h1 id="scene-label">Scene Summary</h1> 
 			<!-- General scene description for page load. Parts will need change dynamically once I figure that out.-->
 			<p id="scene-description">
-				<span id="pload-pa-description">In the Play Area you'll find a balloon, a sweater and a removable wall. Each object shows negative and positive charges. Charges are shown in pairs. Currently, the sweater and wall have many pairs of charges, the balloon, just a few.</span>
-				<span id="pload-cp-description">Below the Play Area, a Control Panel allows you to add and remove objects, adjust charge views and reset the entire experiment.</span> 	
-				<span id="pload-nav-cue">Tab to navigate between objects. Select question mark for keyboard help.</span>
+				<span id="scene-static">In the Play Area, there are one or two balloons, a sweater and a removable wall. Each object shows negative and positive charges. Charges are shown in pairs. Below the Play Area, a Control Panel allows you to add and remove objects, adjust charge views and reset the entire experiment.</span>
+				<span id="scene-object-charges">Currently, the sweater and wall have many pairs of charges, the balloon, just a few.</span> 	
+				<span id="scene-nav-cue-static">Tab to navigate between objects. Select question mark for keyboard help.</span>
 		</p>
 		</header>
 		<!-- Play Area-->
-			<section id="play-area" aria-labelledby="pa-label" aria-describedby="pa-description">
+			<section id="play-area" aria-labelledby="pa-label" aria-describedby="pa-description-static">
 				<h2 id="pa-label">Play Area</h2>
-				<p id="pa-description">Place to experiment with balloons, sweater and wall.</p>                                         	
+				<p id="pa-description-static">Place to experiment with balloons, sweater and wall.</p>                                         	
 				<!-- Sweater is not in the tab order, but needs to be a live region, so changes in charges are communicated. -->
 				<div id="sweater-widget" aria-labelledby="sweater-label" aria-describedby="sweater-description">
 					<h3 id="sweater-label">Sweater</h3>
 					<!-- Sweater charge information changes and will need to be associated with the balloon descriptions some how. -->
 					<p id="sweater-description">
 						<span id="sweater-charge">The Sweater has no more positive charges than negative ones.</span>
-						<span id="sweater-position">It is on the left side of the Play Area.</span> 
+						<span id="sweater-static">It is on the left side of the Play Area.</span> 
 					</p>
 				</div>	
 				
@@ -50,10 +50,10 @@
 							</p>
 					 </div>
 
-					<div id="wall-widget">
+					<div id="wall-widget"  aria-labelledby="wall-label" aria-describedby="wall-description-static">
 						<h3 id="wall-label">Wall</h3>
 						<!-- The actual visual Wall is not in the tab order. The Wall button is. Wall charge information changes and will need to be associated with the balloon descriptions some how. -->
-						<p id="wall-description">
+						<p id="wall-description-static">
 							The wall has no more positive charges than negative ones. It is located on the right side of the Play Area.</p> 
 					</div>
 			</section>
