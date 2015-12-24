@@ -40,12 +40,13 @@
 					</p>
 				</div>	
 				
-					<div role="slider" id="balloon-widget" aria-labelledby="balloon-label" aria-describedby="balloon-description" aria-valuemax="100" aria-valuemin="1" aria-valuenow="50" tabindex="0">
-						<h3 id="balloon-label">Balloon</h3>
-						<!-- Parts of the Balloon description change dynamically. Let's discuss this further. Multiple ids can be associated in aria-describedby. --> 
-						<p id="balloon-description">
-							<span id="balloon-charge">The balloon has no more negative charges than positive ones.</span>
-							<span id="balloon-position">Currently, positioned at equal distance between sweater and wall. The sweater is to the left and the wall is to the right. The top of the balloon is level with the chest area of sweater.</span> 
+				<div id="balloon-widget">
+					<label for="balloon-one">Balloon One</label>
+					<input id="balloon-one" type="range" aria-describedby="balloon-one-description"  aria-valuemin="0" aria-valuemax="1150" aria-valuenow="750" min="100" max="1150" value="750" step="10">
+						<!-- Parts of the Balloon description change dynamically. Multiple ids can be associated in aria-describedby, so the parent wrapper on the description may not be necessary. --> 
+						<p id="balloon-one-description">
+							<span id="balloon-one-charge">The balloon has no more negative charges than positive ones.</span>
+							<span id="balloon-one-position">Currently, positioned at equal distance between sweater and wall. The sweater is to the left and the wall is to the right.</span> 
 							<span id="balloon-nav-help">Select any Arrow key to grab and move balloon. Select Tab for next item. Select question mark for keyboard help.</span>
 							</p>
 					 </div>
@@ -85,7 +86,7 @@
 				  	<h3 id="bs-label">Balloon Settings</h3>
 					  <fieldset id="show-balloon-buttons" role="radiogroup" aria-labelledby="sb-label">
 							<legend id="sb-label">Experiment with one or two balloons.</legend>
-					  	<!-- Jesse, note use of aria-label here as no words are the actual buttons in the UI. -->   	                 
+					  	<!-- Jesse, note use of aria-label here as no words are the actual buttons in the UI. -->  	                 
 							<input id="show-one-balloon" name="show-balloons" value="single-balloon-exp" type="radio" aria-label="One balloon." aria-checked="true" checked>
 							<input id="show-two-balloons" name="show-balloons" value="two-balloon-exp" type="radio" aria-label="Two balloons." aria-checked="false">
 					  </fieldset>
