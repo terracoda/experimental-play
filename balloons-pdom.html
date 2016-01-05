@@ -70,8 +70,8 @@
 					<p id="wall-button-description">Toggle to conduct experiments with or without the wall.</p>
 					
 				  <!-- Jesse, a div and h3 could also work in place of the fieldset and the legend. -->
-			    <fieldset id="charge-view-widget" role="radiogroup" aria-describedby="cs-label cs-description">
-				  <legend id="cs-label">Charge Settings</legend>
+			    <div id="charge-view-widget" role="radiogroup" aria-describedby="cs-label cs-description">
+				  <h3 id="cs-label">Charge Settings</h3>
 					<!-- Jesse, again, note redundancy in aria-checked and native HTML5 checked. -->
 					<!-- Note the name attribute value is the same for each, as only one value is submitted. --> 	  
 					  <label for="show-charges">Show all charges <input id="show-charges" name="charge-settings" value="show-all" type="radio" aria-checked="true" checked></label>
@@ -81,16 +81,16 @@
 					  <label for="show-charge-diffs">Show charge differences <input id="show-charge-diffs" name="charge-settings" value="show-differences" type="radio" aria-checked="false"></label>
 					   								
 					  <p id="cs-description">Select how you want to see or hear the charges.</p>
-			    </fieldset> 	                                                   
+			    </div> 	                                                   
 					
 			    <div id="balloon-controls-widget" role="group" aria-describedby="bs-label">
 				  	<h3 id="bs-label">Balloon Settings</h3>
-					  <fieldset id="show-balloon-buttons" role="radiogroup" aria-labelledby="sb-label">
-							<legend id="sb-label">Experiment with one or two balloons.</legend>
+					  <div id="show-balloon-buttons" role="radiogroup" aria-labelledby="sb-label">
+							<h4 id="sb-label">Experiment with one or two balloons.</h4>
 					  	<!-- Jesse, note use of aria-label here as no words are the actual buttons in the UI. -->  	                 
 							<input id="show-one-balloon" name="show-balloons" value="single-balloon-exp" type="radio" aria-label="One balloon." aria-checked="true" checked>
 							<input id="show-two-balloons" name="show-balloons" value="two-balloon-exp" type="radio" aria-label="Two balloons." aria-checked="false">
-					  </fieldset>
+					  </div>
 					  <!-- Remember to add and remove 's' on reset balloon label and the description. --> 
 					  <button id="balloon-reset" name="balloon-reset" type="reset" aria-describedby="balloon-reset-description">Reset Balloon</button>
 					<p id="balloon-reset-description">Returns balloon to initial position and an uncharged state.</p>  
