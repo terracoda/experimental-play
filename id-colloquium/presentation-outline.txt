@@ -1,23 +1,39 @@
 Title: Designing Inclusive Supports for Non-visual Use of Highly Interactive STEM Simulations
 
-I would suggest bulleting out a list of specific messages, and crafting this into a story. You have many pieces in the attached outline - something like:
+Story
+
 - Interactive simulations have become a key part of science education (bigger than PhET)
+
 - PhET is one popular suite of interactive science simulations (high use, but low accessibility)
+
 - Goal: To create an inclusive interactive PhET simulation, and from iterative development create guidelines for making interactive simulations more inclusive
-- Background...
+
+- Researh Background...
+
 - Findings… (you might want to take 1 minute to show the sim and give a very quick walk through, highlighting any features that you’ll be referring to in your findings)
+
 - Take Home Messages...
-- Future Work…
+
+- Future Work
 
 
 10 minutes is short, so you’ll probably want to limit your findings section (or however you end up structuring it) to 2 main points if they require explaining, or 3 main points if one is super straightforward (and probably obvious). I would also suggest keeping the intro very short - my guess is that people will want to hear about the heart of the work, and can already guess about some of the intro without you saying too much. 
 
-If you want to run any possible wording by me, feel free to send it along and I can maybe shorten some messages.
-Background:
-* Super brief background of PhET
+
+Title: Designing Inclusive Supports for Non-visual Use of Highly Interactive STEM Simulations 
+* Taliesin Smith
+* Advising committee: Emily Moore & Clayton Lewis
+* Committee: Vera Roberts
+
+Context & Background:
+* The use of computer simulations in teaching science has become widespread (Finkelstein et al., 2006).
+* The PhET Interactive Simulations of the University of Colorado Boulder is a popular set of Interactive Science Simulations used for teaching STEM education in K-16 classrooms. 
+* PhET sims are high in use, but low in accessibility.
 
 Design Challenge: 
-To design inclusive supports for non-visual use of a Highly Interactive Simulation for students with visual impairments who engage with a desktop computer using a keyboard & a screen reader. The goal of the inclusive supports is to provide an accessible, engaging and effective learning experience through scientific exploration and discovery.
+To design inclusive support for non-visual use of a Highly Interactive Simulation for students with visual impairments who engage with a desktop computer using a keyboard & a screen reader.
+
+Goal: The goal of the inclusive supports is to provide an accessible, engaging and effective learning experience through scientific exploration and discovery.
 
 Balloons and Static Electricity
 * Looks simple enough, but once you start interacting with it, you discovering complexity at different levels. 
@@ -82,3 +98,12 @@ What is the original contribution in your work - something no one else has done 
 Access: Can students access to Sim Controls? Yes!
 Action: Can the access engage the students through interaction once they have access to controls? Yes!
 Agency: Can students ask their own questions and test their hypotheses? Can they guide their own learning? Yes!
+                                           
+Acknowledgements
+
+Special Thanks also to others
+* Sambhavi Chandrashekar
+* Vera Roberts
+* DELTS Media services 
+       
+* 
