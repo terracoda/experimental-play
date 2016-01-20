@@ -8,7 +8,7 @@ Story
 
 - Goal: To create an inclusive interactive PhET simulation, and from iterative development create guidelines for making interactive simulations more inclusive
 
-- Researh Background...
+- Research Background...
 
 - Findings… (you might want to take 1 minute to show the sim and give a very quick walk through, highlighting any features that you’ll be referring to in your findings)
 
@@ -22,40 +22,30 @@ Story
 
 Title: Designing Inclusive Supports for Non-visual Use of Highly Interactive STEM Simulations 
 * Taliesin Smith
-* Advising committee: Emily Moore & Clayton Lewis
-* Committee: Vera Roberts
+* Advisors: Dr. Emily Moore & Dr. Clayton Lewis
+
 
 Context & Background:
 * The use of computer simulations in teaching science has become widespread (Finkelstein et al., 2006).
 * The PhET Interactive Simulations of the University of Colorado Boulder is a popular set of Interactive Science Simulations used for teaching STEM education in K-16 classrooms. 
-* PhET sims are high in use, but low in accessibility.
+* PhET sims are high in use, but low in accessibility. 
+
+Target User:
+Why is your project important? 
+* In Canada, half a million people have significant vision loss and every year more than 50,000 lose their sight (CNIB)
+* NFB reports that 694, 300 children have a vision loss and that there 60, 393 who are legally blind.
 
 Design Challenge: 
-To design inclusive support for non-visual use of a Highly Interactive Simulation for students with visual impairments who engage with a desktop computer using a keyboard & a screen reader.
+To design inclusive supports for non-visual use of a Highly Interactive Simulation for students with visual loss who engage with a desktop computer using a keyboard & a screen reader.
 
-Goal: The goal of the inclusive supports is to provide an accessible, engaging and effective learning experience through scientific exploration and discovery.
+Goal: an inclusive layer that provides an accessible, engaging and effective learning experience through scientific exploration and discovery.
 
 Balloons and Static Electricity
 * Looks simple enough, but once you start interacting with it, you discovering complexity at different levels. 
-
-Context:
-Why is your project important? 
-* more and more learning objects and resources are being delivered in a digital format (need stats).
-* more and more of these are interactive in nature.
-* STEM education is excellent for the development of critical thinking skills (ref).
-* X number of students in NA who have a visual impairment (need stat).
-
-Why I chose to work on this project?
-* Interested making digital educational tools accessible
-* Desire to dive deeper into tough accessibility problems
-* Learn how to work on an open source project
-* Working on a PhET Simulation was the perfect opportunity for me  
-
-What other related work has been done on the topic? 
-* Web Standards are well-suited to making a web application with a well-defined path accessible (W3C & years of work on this)
-* Work on making STEM images accessible through description standards (Rothberg)
-* Description Guidelines have recently been synthesized and applied to simple Dynamic Interactive Scientific Graphics (charts and graphs) (Keane)
-* Accessible Gaming (reference needed)
+ 
+Research Background 
+* Web Standards: we know how to make typical wen content & web applications accessible (WCAG 2.0, WAI-ARIA 1.0)
+* Description guidelines for complex STEM images (Rothberg, 2002) and more recently Accessible Dynamic Scientific Graphics (Kyle Keane, DIAGram Center, 2014)
 * Molecular chemical diagrams have been made interactive and navigable. Sorge, Lee & Wilkinson have used a similar technique to make static diagrams accessible.
  
 What is the gap being filled by your project? 
@@ -65,18 +55,7 @@ Problem
 What problem are you trying to solve? 
 * Access: before this project began, there was no access for visually impaired students who use a screen reader. Sim interactions and content were mouse-driven and almost exclusively conveyed through visual means.
 * Action: How to make keyboard interactions intuitive and engaging as mouse interactions?
-* Agency: Connecting the interactions & the content (auditory description & sonification) that implicitly supports and guides the non-visual learner in their own questioning. (Moore (PhET's Design Philosphy))
-
-Who are the people facing the problem currently? 
-* students who blind or very low vision
-
-How will they benefit by the solution you are designing? 
-* access, engage & learn from the simulation along side their peers
-* direct their own learning through active experimentation, rather than having to listen passively to the description of someone telling them what is happening
-
-Who else has tried to solve the same or related problems earlier? 
-* people are working on it mentioned above : W3C, Sorge 
-* Interactive Chemical Diagrams are the closest example I have found, the molecular diagram does not change. It's static.
+* Agency: Connecting the interactions & the content (auditory description & sonification) that implicitly supports and guides the non-visual learner in their own questioning. (Moore (PhET's Design Philosophy))
 
 Process 
 * iterative human-centered design
