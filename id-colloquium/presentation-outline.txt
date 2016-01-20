@@ -2,19 +2,56 @@ Title: Designing Inclusive Supports for Non-visual Use of Highly Interactive STE
 
 Story
 
-- Interactive simulations have become a key part of science education (bigger than PhET)
+- The use of computer simulations in teaching science has become a key part of science education (Finkelstein et al., 2006).
+* There are many players engaged in making science simulations for educational use.
+* Text book and learning technology companies make a huge number of science simulations.
 
-- PhET is one popular suite of interactive science simulations (high use, but low accessibility)
+- PhET Interactive Simulations, an open source initiative at the University of Colorado, Boulder, is one popular suite of interactive science simulations that are open and free for everyone to use. 
+* High quality - based in research
+* High use - run over 75 million times a year
+* Low on accessibility - PhET Sims are highly visual and designed for mouse interaction, making them particularly inaccessible to students who are blind or have vision loss. 
 
-- Goal: To create an inclusive interactive PhET simulation, and from iterative development create guidelines for making interactive simulations more inclusive
+- Goal of this project: 
+* By leveraging advancements in open web technologies create an inclusive PhET simulation that provides an accessible, engaging and effective learning experience for students with vision loss who use a screen reader.                                  
+* From iterative design & development create guidelines for making interactive simulations more inclusive.
+
+- Target User 
+* Students who are blind or have substantial vision loss and who use a screen reader
+* Almost 700,000 students in the US have some kind of vision loss and more than 60,000 students in are legally blind (NFB) 
 
 - Research Background...
+* How people who blind form mental models: listen and then interact (Fakrudeen et all 2013; Kurniawan et al 2003;)
+* Best practices in keyboard interactions (W3C, WebAIM, Horton & Sloan, Maximova, Raskin) 
+* Recent Guidelines for description of dynamic scientific graphics have been helpful (Keane, 2014)
 
-- Findings… (you might want to take 1 minute to show the sim and give a very quick walk through, highlighting any features that you’ll be referring to in your findings)
+- Findings thus far (demo sim)
+* Content Layer Parallel Dom - providing access to essential content
+* Content layer & controls are accessible via the keyboard 
+* Changing content updated in real time (ARIA-live regions, ARIA-describedby)
 
-- Take Home Messages...
+Access
+* keyboard access across browsers
+* keyboard access with some screen readersWhen we turn on the screen readers we experience some take-over of the sim's keyboard commands
+** Access to essential static content and some dynamically changing content.
 
-- Future Work
+Action
+We've witnessed successful interaction that engages the user
+  Quotes or clips from interviews:
+  "Reset Balloons, no I don't want to do that, I am still playing." 
+ 
+Agency
+[with 2 negatively charged balloons on the Sweater] "I want to see what happens if I put one balloon on top of the other." [Balloon repels and moves to the bottom of the sweater.]
+ "Now, I'll see what happens when I do the same thing on the wall. [no change] Let's see what happens if I remove the wall?"
+
+- Take Home Messages
+* Complex problem space.
+* We've based our decisions on web standards, the user and pedagogical principles.
+* Through interviews we've gained insight into both the diverse strategies that users employ and the frustrating diverse natures of screen reader technology.
+
+- Future Work & Next Steps (1 minute) 
+* refinement and implementation of dynamic descriptions
+* implementation of some simple immersive sonification
+* deeper investigation of technical the relationship between the content layer (parallel-DOM), sim application and screen readers 
 
 
 10 minutes is short, so you’ll probably want to limit your findings section (or however you end up structuring it) to 2 main points if they require explaining, or 3 main points if one is super straightforward (and probably obvious). I would also suggest keeping the intro very short - my guess is that people will want to hear about the heart of the work, and can already guess about some of the intro without you saying too much. 
@@ -28,10 +65,14 @@ Title: Designing Inclusive Supports for Non-visual Use of Highly Interactive STE
 Context & Background:
 * The use of computer simulations in teaching science has become widespread (Finkelstein et al., 2006).
 * The PhET Interactive Simulations of the University of Colorado Boulder is a popular set of Interactive Science Simulations used for teaching STEM education in K-16 classrooms. 
-* PhET sims are high in use, but low in accessibility. 
+* PhET sims are high in use, but low in accessibility. In particular, there is no access for students who cannot use a mouse or cannot see. 
+
+Research Background 
+* Web Standards: we know how to make typical wen content & web applications accessible (WCAG 2.0, WAI-ARIA 1.0)
+* Description guidelines for complex STEM images (Rothberg, 2002) and more recently Accessible Dynamic Scientific Graphics (Kyle Keane, DIAGram Center, 2014)
+* Molecular chemical diagrams have been made interactive and navigable. Sorge, Lee & Wilkinson have used a similar technique to make static diagrams accessible.
 
 Target User:
-Why is your project important? 
 * In Canada, half a million people have significant vision loss and every year more than 50,000 lose their sight (CNIB)
 * NFB reports that 694, 300 children have a vision loss and that there 60, 393 who are legally blind.
 
@@ -62,7 +103,8 @@ Process
 * constructivist approach to learning
 
 Outcome
-What do you expect to achieve in your project? 
+What do you expect to achieve in your project?
+* content layer - show this as a demo 
 * keyboard access on all systems
 * Screen reader access on some systems JAWS & IE, NVDA & FF, VoiceOver on El Capitan (Maybe)
 * Contributions to PhET's documentation
@@ -77,12 +119,15 @@ What is the original contribution in your work - something no one else has done 
 Access: Can students access to Sim Controls? Yes!
 Action: Can the access engage the students through interaction once they have access to controls? Yes!
 Agency: Can students ask their own questions and test their hypotheses? Can they guide their own learning? Yes!
+
+Curbcut at end.
                                            
 Acknowledgements
 
+References
+
 Special Thanks also to others
-* Sambhavi Chandrashekar
-* Vera Roberts
-* DELTS Media services 
-       
-* 
+* Sambhavi Chandrashekar, OCAD University, engaging discussions
+* Jesse Greenberg, PhET Software developer implementing the designs
+* DELTS Media Services, Memorial University, recording equipment for interviews in St. John's    
+* Vera Roberts, Inclusive Design Research Centre
