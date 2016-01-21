@@ -1,133 +1,90 @@
-Title: Designing Inclusive Supports for Non-visual Use of Highly Interactive STEM Simulations
+Designing Inclusive Supports for Non-visual Use of a Highly Interactive Simulation
+Taliesin L. Smith
+Advisory Committee: Dr. Emily Moore & Dr. Clayton Lewis 
 
-Story
+Slide 1: Interactive Simulations, Key part of Science education (0.5)
 
-- The use of computer simulations in teaching science has become a key part of science education (Finkelstein et al., 2006).
-* There are many players engaged in making science simulations for educational use.
-* Text book and learning technology companies make a huge number of science simulations.
+Due to increasing availability of computers, smartboards and mobile devices, the use of computer simulations in the classroom has become widespread (Rutten, van Joolingen, & van der Veen, 2012)
+Computer-based simulations allow students to use models to investigate scientific phenomena in different physical scales and timelines, and when when real equipment is not available (D’Angelo et al., 2014)
+Simulations have a beneficial effect on student learning (D’Angelo et al., 2014; Rutten et al., 2012)
 
-- PhET Interactive Simulations, an open source initiative at the University of Colorado, Boulder, is one popular suite of interactive science simulations that are open and free for everyone to use. 
-* High quality - based in research
-* High use - run over 75 million times a year
-* Low on accessibility - PhET Sims are highly visual and designed for mouse interaction, making them particularly inaccessible to students who are blind or have vision loss. 
+Slide 2: PhET Interactive Simulations (1)
 
-- Goal of this project: 
-* By leveraging advancements in open web technologies create an inclusive PhET simulation that provides an accessible, engaging and effective learning experience for students with vision loss who use a screen reader.                                  
-* From iterative design & development create guidelines for making interactive simulations more inclusive.
+An initiative started by Carl Wieman (Nobel Prize in Physics, 2001).
+Very popular – 75 million downloads a year.
+Very high quality simulations - based in research.
+Low on accessibility – highly visual and designed for mouse and touch interaction.
+Consider a rudimentary experiment in [[Balloons and Static Electricity]]. A student grabs the balloon, rubs it on the sweater and then drags it close to the wall.
+Now, imagine how a person cannot see and who does not use a mouse might engage with this simulation in a self-directed exploration.
 
-- Target User 
-* Students who are blind or have substantial vision loss and who use a screen reader
-* Almost 700,000 students in the US have some kind of vision loss and more than 60,000 students in are legally blind (NFB) 
+Slide 3: Goal Project (1)
 
-- Research Background...
-* How people who blind form mental models: listen and then interact (Fakrudeen et all 2013; Kurniawan et al 2003;)
-* Best practices in keyboard interactions (W3C, WebAIM, Horton & Sloan, Maximova, Raskin) 
-* Recent Guidelines for description of dynamic scientific graphics have been helpful (Keane, 2014)
+PhET has embarked on a large project to port all sims to HTML5 and to use modern web technologies to make the sims more inclusive to all students, including students with disabilities. Eventually, there will be many inclusive layers that support the diverse needs of students (Moore, 2015).
+My Research focus:
+Exploring inclusive design solutions that provide non-visual access to a student using a keyboard and screen reader.
+How can the learning experience of students with vision loss using a PhET simulation be made accessible, engaging and effective? 
 
-- Findings thus far (demo sim)
-* Content Layer Parallel Dom - providing access to essential content
-* Content layer & controls are accessible via the keyboard 
-* Changing content updated in real time (ARIA-live regions, ARIA-describedby)
+Slide 4: Target User (1)
 
-Access
-* keyboard access across browsers
-* keyboard access with some screen readersWhen we turn on the screen readers we experience some take-over of the sim's keyboard commands
-** Access to essential static content and some dynamically changing content.
+Students with vision loss who engage with a computer with a screen reader and keyboard.
+To make a PhET Sim accessible this target user:
+Understandable & timely dynamic verbal text description
+Intuitive keyboard interactions that engage the user with the content, 
+complimentary immersive sound effects, or sonfication. 
+The students may or may not be working other students with or without vision loss, so we want the interactions and supports to work in way that allows for student collaboration.
+Electronic Curb cuts: access for visual keyboard users, and students who use switches and switch-like devices.
 
-Action
-We've witnessed successful interaction that engages the user
-  Quotes or clips from interviews:
-  "Reset Balloons, no I don't want to do that, I am still playing." 
- 
-Agency
-[with 2 negatively charged balloons on the Sweater] "I want to see what happens if I put one balloon on top of the other." [Balloon repels and moves to the bottom of the sweater.]
- "Now, I'll see what happens when I do the same thing on the wall. [no change] Let's see what happens if I remove the wall?"
+Slide 5: Research Background (1)
+(maybe show my conceptual research framework here)
 
-- Take Home Messages
-* Complex problem space.
-* We've based our decisions on web standards, the user and pedagogical principles.
-* Through interviews we've gained insight into both the diverse strategies that users employ and the frustrating diverse natures of screen reader technology.
+How people who are blind listen first, then interact (Fakrudeen et all 2013; Kurniawan et al 2003;)
+Web content and typical web applications (online forms or a shopping site) which have a well-defined path to success, accessible. (Caldwell, Cooper, Guarino Reid, & Vanderheiden, 2008; Horton & Quesenbery, 2013; Lisa Pappas, Richard Schwerdtfeger, Joseph Scheuhammer, & Michael Cooper, 2014; Maximova, 2013; Scheuhammer, Cooper, Pappas, & Schwerdtfeger, 2013)
+Description guidelines for static scientific images (Barstow, McKell, Rothberg, & Schmidt, 2004)
+Recent guidelines for simple interactive scientific graphics (Keane & Laverent, 2014)
+All helpful but…PhET sims are unique
+No well defined path, because learning is more diffuse
+Highly interactive.
+Anything we can figure out will be something useful.
 
-- Future Work & Next Steps (1 minute) 
-* refinement and implementation of dynamic descriptions
-* implementation of some simple immersive sonification
-* deeper investigation of technical the relationship between the content layer (parallel-DOM), sim application and screen readers 
+Slide 6: Prototype thus far (2) 
+(show sim, do same experiment & talk)
 
+Parallel-DOM creates an accessible to content layer
+Keyboard interactions - a way to navigate and interact with content
+ARIA live regions (web standards) we can update the content layer dynamically as the students interact
 
-10 minutes is short, so you’ll probably want to limit your findings section (or however you end up structuring it) to 2 main points if they require explaining, or 3 main points if one is super straightforward (and probably obvious). I would also suggest keeping the intro very short - my guess is that people will want to hear about the heart of the work, and can already guess about some of the intro without you saying too much. 
+Slide 7: Findings thus far (2)
 
+Content Layer Parallel Dom - providing access to essential content
+Content layer & sim controls are accessible via the keyboard 
+Some changing content updated in real time as the student interacts 
+Navigation
+P4: [Starts off by looking navigating by section] “Nice, lots of regions...now, I'll look for the Main region.” [Finds it on second go around.]
+P1 (Ross): “I generally use the arrow keys to navigate line by line.”
+Engagement
+P3: [with 2 negatively charged balloons on the Sweater] "I want to see what happens if I put one balloon on top of the other." [Balloon repels and moves to the bottom of the sweater.]...“Now, I'll see what happens when I do the same thing on the wall. [no change]”
+Slide 8: Complex problem space (1)
+Through iterative design & participant interviews we've gained insight into 
+How people who are blind approach interactive simulations running in a browser 
+* Like typical web pages, employ known navigational strategies
+Authentic, unprompted exploration and discovery by the participants is an indication that the approach we’re taking, of keyboard navigation and auditory descriptions can result in effective, exploratory, learning tools for diverse users.
 
-Title: Designing Inclusive Supports for Non-visual Use of Highly Interactive STEM Simulations 
-* Taliesin Smith
-* Advisors: Dr. Emily Moore & Dr. Clayton Lewis
+Slide 8: Future Work & Next Steps (0.5)
+Refinement, optimization of dynamic descriptions.
+Explore simple immersive sonifications for rubbing, bumping into wall, some charge behaviour.
 
+Slide 9: Special Acknowledgements
+Sambhavi Chandrashekar, OCAD University
+Jesse Greenberg, PhET Software developer
+Vera Roberts, Inclusive Design Research Centre
+DELTS & DELTS Media Services, Memorial University 
 
-Context & Background:
-* The use of computer simulations in teaching science has become widespread (Finkelstein et al., 2006).
-* The PhET Interactive Simulations of the University of Colorado Boulder is a popular set of Interactive Science Simulations used for teaching STEM education in K-16 classrooms. 
-* PhET sims are high in use, but low in accessibility. In particular, there is no access for students who cannot use a mouse or cannot see. 
+Slide 10: References
 
-Research Background 
-* Web Standards: we know how to make typical wen content & web applications accessible (WCAG 2.0, WAI-ARIA 1.0)
-* Description guidelines for complex STEM images (Rothberg, 2002) and more recently Accessible Dynamic Scientific Graphics (Kyle Keane, DIAGram Center, 2014)
-* Molecular chemical diagrams have been made interactive and navigable. Sorge, Lee & Wilkinson have used a similar technique to make static diagrams accessible.
-
-Target User:
-* In Canada, half a million people have significant vision loss and every year more than 50,000 lose their sight (CNIB)
-* NFB reports that 694, 300 children have a vision loss and that there 60, 393 who are legally blind.
-
-Design Challenge: 
-To design inclusive supports for non-visual use of a Highly Interactive Simulation for students with visual loss who engage with a desktop computer using a keyboard & a screen reader.
-
-Goal: an inclusive layer that provides an accessible, engaging and effective learning experience through scientific exploration and discovery.
-
-Balloons and Static Electricity
-* Looks simple enough, but once you start interacting with it, you discovering complexity at different levels. 
- 
-Research Background 
-* Web Standards: we know how to make typical wen content & web applications accessible (WCAG 2.0, WAI-ARIA 1.0)
-* Description guidelines for complex STEM images (Rothberg, 2002) and more recently Accessible Dynamic Scientific Graphics (Kyle Keane, DIAGram Center, 2014)
-* Molecular chemical diagrams have been made interactive and navigable. Sorge, Lee & Wilkinson have used a similar technique to make static diagrams accessible.
- 
-What is the gap being filled by your project? 
-* There are no examples or guidelines when an application as dynamic as a PhET simulation and the interactions have no well-defined path.
-
-Problem 
-What problem are you trying to solve? 
-* Access: before this project began, there was no access for visually impaired students who use a screen reader. Sim interactions and content were mouse-driven and almost exclusively conveyed through visual means.
-* Action: How to make keyboard interactions intuitive and engaging as mouse interactions?
-* Agency: Connecting the interactions & the content (auditory description & sonification) that implicitly supports and guides the non-visual learner in their own questioning. (Moore (PhET's Design Philosophy))
-
-Process 
-* iterative human-centered design
-* constructivist approach to learning
-
-Outcome
-What do you expect to achieve in your project?
-* content layer - show this as a demo 
-* keyboard access on all systems
-* Screen reader access on some systems JAWS & IE, NVDA & FF, VoiceOver on El Capitan (Maybe)
-* Contributions to PhET's documentation
-
-How will it benefit people other than the target user group, if at all? 
-* keyboard access will benefit visual keyboard-only users
-* documentation will help PhET's larger goals of making all sims inclusive
-
-What is the original contribution in your work - something no one else has done so far? 
-* no one has made such a highly interactive simulation keyboard and screen reader accessible    
-
-Access: Can students access to Sim Controls? Yes!
-Action: Can the access engage the students through interaction once they have access to controls? Yes!
-Agency: Can students ask their own questions and test their hypotheses? Can they guide their own learning? Yes!
-
-Curbcut at end.
-                                           
-Acknowledgements
-
-References
-
-Special Thanks also to others
-* Sambhavi Chandrashekar, OCAD University, engaging discussions
-* Jesse Greenberg, PhET Software developer implementing the designs
-* DELTS Media Services, Memorial University, recording equipment for interviews in St. John's    
-* Vera Roberts, Inclusive Design Research Centre
+Barstow, C., McKell, M., Rothberg, M., & Schmidt, C. (2004, January 19). IMS Guidelines for Developing Accessible Learning Applications. IMS Global. Retrieved from http://www.imsglobal.org/accessibility/accessiblevers/index.html
+Caldwell, B., Cooper, M., Guarino Reid, L., & Vanderheiden, G. (2008, December). Web Content Accessibility Guidelines (WCAG) 2.0. W3C. Retrieved from http://www.w3.org/TR/WCAG20/
+Horton, S., & Quesenbery, W. (2013). A Web for Everyone: Designing Accessible User Experiences. Brooklyn, New York: Rosenfeld Media. Retrieved from http://rosenfeldmedia.com/books/a-web-for-everyone/
+Scheuhammer, J., Cooper, M., Pappas, L., & Schwerdtfeger, R. (2013, March). WAI-ARIA 1.0 Authoring Practices. Retrieved March 2, 2015, from http://www.w3.org/TR/wai-aria-practices/
+Keane, K., & Laverent, C. (2014). Interactive Scientific Graphics Recommended Practices for Verbal Description (Research) (p. 53). Champaign, IL: Wolfram Research, Inc. Retrieved from http://diagramcenter.org/accessible-dynamic-scientific-graphics.html
+Lisa Pappas, Richard Schwerdtfeger, Joseph Scheuhammer, & Michael Cooper. (2014). 11. Design Patterns. In WAI-ARIA 1.0 Authoring Practices. W3C. Retrieved from http://www.w3.org/WAI/PF/aria-practices/#aria-write
+Maximova, S. (2013, November 5). J,K, or How to choose keyboard shortcuts for web applications [Online Magazine]. Retrieved from https://medium.com/@sashika/j-k-or-how-to-choose-keyboard-shortcuts-for-web-applications-a7c3b7b408ee#.mrzwq3n1q
