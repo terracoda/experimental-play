@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=1024, user-scalable=no">
 
-  <title>Project Presentation</title>
+  <title>Research Colloquium</title>
 
   <!-- Required stylesheet -->
   <link rel="stylesheet" media="screen" href="../deck/core/deck.core.css">
@@ -37,89 +37,118 @@
     <section class="slide"> 
 			<h2>Inclusive Design Research Colloquium</h2>
 		  	<div class="vcenter">
-					<h1>Designing Inclusive Supports for Non-visual Use of a Highly Interactive Simulation  </h1> 
+					<h1>Designing Inclusive Supports for Non-visual Use of a Highly Interactive Simulation  </h1>
+					<p>Advisory Committee: Dr. Emily Moore &amp; Dr. Clayton Lewis</p> 
 					<p class="slide-note"><small><abbr>OCAD University</abbr> Jan. 21,  2016</small></p>  
 				</div>
     </section>
 
 <section class="slide">
-	<h2>1</h2>
+	<h2>Interactive Simulations, Key part of Science education</h2>
 	<ul>
-		<li><li>
-		<li><li>
-		<li><li>	
+		<li>Due to increasing availability of computers, smartboards and mobile devices, the use of computer simulations in the classroom has become widespread (Rutten, van Joolingen, &amp; van der Veen, 2012)</li>
+		<li>Computer-based simulations allow students to use models to investigate scientific phenomena in different physical scales and timelines, and when when real equipment is not available (D’Angelo et al., 2014)</li>
+		 <li>Simulations have a beneficial effect on student learning (D’Angelo et al., 2014; Rutten et al., 2012)</li>
 	</ul>
 	
 </section>
 
 <section class="slide">
-		<h2>2</h2>
+		<h2>PhET Interactive Simulations</h2>
 		<ul>
-			<li><li>
-			<li><li>
-			<li><li>	
+			<li>An initiative started by Carl Wieman (Nobel Prize in Physics, 2001).</li>
+			<li>Very popular – 75 million downloads a year.</li>
+			<li>Very high quality simulations - based in research.</li>
+			<li>Low on accessibility – highly visual and designed for mouse and touch interaction.</li>
+			<li>Consider a rudimentary experiment in [[Balloons and Static Electricity]]. A student grabs the balloon, rubs it on the sweater and then drags it close to the wall.</li>
+			 <li>Now, imagine how a person cannot see and who does not use a mouse might engage with this simulation in a self-directed exploration.</li>	
 		</ul>
 
 </section>
 
 <section class="slide">
-		<h2>3</h2>
+		<h2>Goals part of a larger project</h2>
 		<ul>
-			<li><li>
-			<li><li>
-			<li><li>	
+			<li>PhET has embarked on a large project to port all sims to HTML5 and to use modern web technologies to make the sims more inclusive to all students, including students with disabilities. Eventually, there will be many inclusive layers that support the diverse needs of students (Moore, 2015).<li> 
+		</ul> 
+		<h3>My Research Focus</h3>
+		<ul>
+			<li>Exploring inclusive design solutions that provide non-visual access to a student using a keyboard and screen reader.</li>
+			<li>How can the learning experience of students with vision loss using a PhET simulation be made accessible, engaging and effective?</li>
 		</ul>
 </section>  
 
 <section class="slide">
-		<h2>4</h2>
+		<h2>Target User</h2>
 		<ul>
-			<li><li>
-			<li><li>
-			<li><li>	
+			<li>Students with vision loss who engage with a computer with a screen reader and keyboard.</li>
+			 <li>To make a PhET Sim accessible this target user:</li>
+			 <li>Understandable &amp; timely dynamic verbal text description</li>
+			 <li>Intuitive keyboard interactions that engage the user with the content, </li>
+			 <li>Complimentary immersive sound effects, or sonification. </li> 
+		</ul>
+		<p><srtong>Keep in mimd:</srtong> students may be working on her own or with other students with or without vision loss, so we want the inclusive supports to work in way that allows for student collaboration.</p>
+			<p><strong>Electronic Curb cuts: </strong>access for visual keyboard users, and students who use switches and switch-like devices. </p>
+</section>
+<section class="slide">
+		<h2>Research Background</h2>
+		<ul>
+			<li>How people who are blind listen first, then interact (Fakrudeen et all 2013; Kurniawan et al 2003;)</li>
+			<li>Web content and typical web applications (online forms or a shopping site) which have a well-defined path to success, accessible. (Caldwell, Cooper, Guarino Reid, &amp; Vanderheiden, 2008; Horton &amp; Quesenbery, 2013; Lisa Pappas, Richard Schwerdtfeger, Joseph Scheuhammer, &amp; Michael Cooper, 2014; Maximova, 2013; Scheuhammer, Cooper, Pappas, &amp; Schwerdtfeger, 2013)</li>
+			<li>Description guidelines for static scientific images (Barstow, McKell, Rothberg, &amp; Schmidt, 2004)</li>
+			<li>Recent guidelines for simple interactive scientific graphics (Keane &amp; Laverent, 2014)</li>
+			<li>All helpful but…PhET sims are unique</li>
+			<li>No well defined path, because learning is more diffuse</li>
+			<li>Highly interactive.</li>
+			<li>Anything we can figure out will be something useful.</li>	
 		</ul>
 </section>
 <section class="slide">
-		<h2>5</h2>
+		<h2>Prototype thus far provides</h2>
 		<ul>
-			<li><li>
-			<li><li>
-			<li><li>	
-		</ul>
-</section>
-<section class="slide">
-		<h2>6</h2>
-		<ul>
-			<li><li>
-			<li><li>
-			<li><li>	
-		</ul>
-</section>
-
-<section class="slide">
-		<h2>7</h2>
-		<ul>
-			<li><li>
-			<li><li>
-			<li><li>	
-		</ul>
-</section>
-
-<section class="slide">
-		<h2>8</h2>
-		<ul>
-			<li><li>
-			<li><li>
-			<li><li>	
+			<li>Parallel-DOM creates an accessible to content layer</li>
+			<li>Keyboard interactions - a way to navigate and interact with content</li>
+			<li>ARIA live regions (web standards) we can update the content layer dynamically as the students interact </li>
 		</ul>
 </section>
 
 <section class="slide">
-		<h2>9</h2>
+		<h2>Initial findings from 4 interviews</h2>
+		<h3>Navigation</h3>
+		<blockquote>P<p>4: [Starts off by looking navigating by section] “Nice, lots of regions...now, I'll look for the Main region.” [Finds it on second go around.]</p></blockquote>
+					 <blockquote><p>P1 (Ross): “I generally use the arrow keys to navigate line by line.” </p></blockquote>
+		 
+		 <h3>Engagement</h3>
+			 <blockquote>
+				<p>P3: [with 2 negatively charged balloons on the Sweater] "I want to see what happens if I put one balloon on top of the other." [Balloon repels and moves to the bottom of the sweater.]...“Now, I'll see what happens when I do the same thing on the wall. [no change]”</p>
+				</blockquote>
+</section>
+
+<section class="slide">
+		<h2>Complex problem space</h2>
 		<ul>
-			<li><li>
-			<li><li>
-			<li><li>	
+			<li>How people who are blind approach interactive simulations running in a browser.</li>
+			 <li><ul>
+						<li>◦	Like typical web pages, employ known navigational strategies</li>
+						</ul></i>
+			 <li>Authentic, unprompted exploration and discovery by the participants is an indication that the approach we’re taking, of keyboard navigation and auditory descriptions can result in effective, exploratory, learning tools for diverse users.</li> 
+		</ul>
+</section>
+
+<section class="slide">
+		<h2>Future Work &amp; Next Steps</h2>
+		<ul>
+		 	<li>Refinement, optimization of dynamic descriptions.</li>
+		 	 <li>Explore simple immersive sonifications for rubbing, bumping into wall, some charge behaviour </li>
+		</ul>
+</section> 
+<section class="slide">
+		<h2>Acknowledgements</h2>
+		<ul>
+		 	<li>Sambhavi Chandrashekar, OCAD University</li>
+		 	<li>Jesse Greenberg, PhET Software developer</li>
+		 	<li>Vera Roberts, Inclusive Design Research Centre</li>
+		 	<li>DELTS &amp; DELTS Media Services, Memorial University</li>
 		</ul>
 </section>
 
