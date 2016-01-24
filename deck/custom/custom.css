@@ -5,13 +5,13 @@
 }
 li li {
 	font-size: 100%;
-}
+}  */
 ul.norm li {
-	font-size: 120%;
-}
+	font-size: 80%;
+} 
 blockquote {
-	font-size: 180%;
-} */
+	font-size: 100%;
+}
 .slide a {
    border-bottom: 1px dotted;
 }
@@ -31,13 +31,11 @@ figure img.img-large {
 figure img.persona {
 	height: 350px;
 }
-small {
-	font-size: 80%;
-} 
+
 .slide-note,
 .demo {
 	font-size: 200%;
-}
+} 
 .speaker-note, .wcag-note, .demo-note {
    font-size: 1px;
 	display: block;
