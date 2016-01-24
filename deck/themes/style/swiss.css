@@ -82,7 +82,7 @@ nav ul, nav li {
   list-style-image: none; }
 
 small {
-  font-size: 85%; }
+  font-size: 80%; }
 
 strong, th {
   font-weight: bold; }
@@ -166,7 +166,7 @@ h1, .vcenter {
 .vcenter h1 {
   position: relative;
   top: auto;
-  padding: 0;
+  padding: 1em 0 0 0;
   -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
@@ -174,30 +174,26 @@ h1, .vcenter {
   transform: none; }
 
 h2 {
-  font-size: 2.25em;
+  font-size: 1.5em;
   font-weight: bold;
   padding-top: .5em;
   margin: 0 0 .66666em 0;
   border-bottom: 3px solid #888; }
 
 h3 {
-  font-size: 1.4375em;
+  font-size: 1em;
   font-weight: bold;
   margin-bottom: .30435em; }
 
 h4 {
-  font-size: 1.25em;
+  font-size: 1em;
   font-weight: bold;
   margin-bottom: .25em; }
 
-h5 {
-  font-size: 1.125em;
+h5, h6 {
+  font-size: 1em;
   font-weight: bold;
   margin-bottom: .2222em; }
-
-h6 {
-  font-size: 1em;
-  font-weight: bold; }
 
 img, iframe, video {
   display: block;
@@ -227,9 +223,10 @@ li {
     margin-bottom: inherit; }
 
 .deck-container {
-  font-size: 16px;
+  font-size: 32px;
   line-height: 1.25;
-  color: #444; }
+  color: #444;
+  /*(9.74:1)*/ }
 
 .slide {
   -moz-box-sizing: border-box;
@@ -240,7 +237,7 @@ h1 {
   color: #000; }
 
 h2 {
-  color: #c00;
+  color: #001B70;
   border-bottom-color: #ccc; }
 
 h3 {
@@ -267,15 +264,15 @@ blockquote {
     color: #888; }
 
 ::-moz-selection {
-  background: #c00;
+  background: #0168BD;
   color: #fff; }
 
 ::selection {
-  background: #c00;
+  background: #0168BD;
   color: #fff; }
 
 a, a:hover, a:focus, a:active, a:visited {
-  color: #c00;
+  color: #0168BD;
   text-decoration: none; }
 a:hover, a:focus {
   text-decoration: underline; }
@@ -300,7 +297,7 @@ a:hover, a:focus {
   .deck-prev-link, .deck-prev-link:hover, .deck-prev-link:focus, .deck-prev-link:active, .deck-prev-link:visited, .deck-next-link, .deck-next-link:hover, .deck-next-link:focus, .deck-next-link:active, .deck-next-link:visited {
     color: #fff; }
   .deck-prev-link:hover, .deck-prev-link:focus, .deck-next-link:hover, .deck-next-link:focus {
-    background: #c00;
+    background: #001B70;
     text-decoration: none; }
 
 .deck-status {
