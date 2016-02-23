@@ -17,16 +17,21 @@
 		<!-- Jesse, note redundancy in aria landmark roles and native html roles is intentional. Using both is debatable, but permissible as AT catches up with HTML5 semantics. -->
 		<!-- header: sets the scene with the h1 and the scene description. --> 
 		<!-- Note h1 content is intentionally different from the page title. --> 
-		<header role="banner" aria-labelledby="scene-label" aria-describedby="scene-description">
-			<h1 id="scene-label">Scene Summary</h1> 
-			<!-- General scene description for page load. Parts will need change dynamically once I figure that out.-->
-			<p id="scene-description">
-				<span id="scene-static">In the Play Area, there are one or two balloons, a sweater and a removable wall. Each object shows negative and positive charges. Charges are shown in pairs. Below the Play Area, a Control Panel allows you to add and remove objects, adjust charge views and reset the entire experiment.</span>
-				<span id="scene-object-charges">Currently, the sweater and wall have many pairs of charges, the balloon, just a few.</span> 	
-				<span id="scene-nav-cue-static">Tab to navigate between objects. Select question mark for keyboard help.</span>
-		</p>
+		<header role="banner" >
+			<!-- Header area for common sim stuff.--> 
+			<h1>Balloons and Static Electricity</h1> 
 		</header>
-		<!-- Play Area-->
+		<!-- Play Area--> 
+		<main>
+		  <section id="scene-summary" aria-labelledby="scene-label" aria-describedby="scene-description">
+				 <h2 id="scene-label">Scene Summary</h1> 
+					<!-- General scene description for page load. Parts will need change dynamically once I figure that out.-->
+					<p id="scene-description">
+						<span id="scene-static">This simulation contains a Play Area and a Control Panel. The Play Area is a room. It has a balloon, a sweater and a wall. The Control Panel allows you to add a balloon, remove wall and reset entire experiment.</span>
+						<span id="scene-object-charges">Currently, sweater and wall have many pairs of negative and positive charges, the balloon, just a few. Balloon is in middle of Play Area, evenly between sweater and wall. </span> 	
+						<span id="scene-nav-cue-static"> Tab to navigate to next object. Press question mark for keyboard commands and help.‬</span>
+				</p>
+			</section>
 			<section id="play-area" aria-labelledby="pa-label" aria-describedby="pa-description-static">
 				<h2 id="pa-label">Play Area</h2>
 				<p id="pa-description-static">Place to experiment with balloons, sweater and wall.</p>                                         	
@@ -35,28 +40,26 @@
 					<h3 id="sweater-label">Sweater</h3>
 					<!-- Sweater charge information changes and will need to be associated with the balloon descriptions some how. -->
 					<p id="sweater-description">
-						<span id="sweater-charge">The Sweater has no more positive charges than negative ones.</span>
-						<span id="sweater-static">It is on the left side of the Play Area.</span> 
+						<span id="sweater-charge">The sweater has a ‪neutral‬ charge, with ‪no‬ more positive charges than negative ones.‬</span>
 					</p>
 				</div>	
 				
 				<!-- As discussed in issue #108. -->
 				<div id="balloon-one-widget" aria-labelledby="balloon-one-label" aria-describedby="balloon-one-description">
-					<h3 id="balloon-one-label">Balloon One</h3> 
+					<h3 id="balloon-one-label">Yellow Balloon</h3> 
 				    <input role="application" type="image" src="img/balloon-yellow.png" alt="" name="balloon-14-35-37-270-343-346" aria-live="polite" id="balloon-14-35-37-270-343-346" draggable="true" class="Balloon" aria-labelledby="balloon-label" aria-describedby="balloon-one-description"></input>
 				    
 				    <p id="balloon-one-description">
-				        <span id="balloon-one-charge">The balloon has no more negative charges than positive ones.</span>
+				        <span id="balloon-one-charge">Yellow Balloon has a neutral‬charge, no‬more negative charges than positive ones.</span>
 				        <span id="balloon-one-position">Currently, positioned at equal distance between sweater and wall. The sweater is to the left and the wall is to the right.</span> 
-				        <span id="balloon-nav-help">Select any Arrow key to grab and move balloon. Select Tab for next item. Select question mark for keyboard help.</span>
+				        <span id="balloon-nav-help">‪Use W, A, S, and D keys to grab and drag balloon up, left, down and right. Tab for next object. Press question mark for keyboard commands and help.</span>
 				    </p>
 				 </div>
 
 					<div id="wall-widget"  aria-labelledby="wall-label" aria-describedby="wall-description-static">
 						<h3 id="wall-label">Wall</h3>
 						<!-- The actual visual Wall is not in the tab order. The Wall button is. Wall charge information changes and will need to be associated with the balloon descriptions some how. -->
-						<p id="wall-description-static">
-							The wall has no more positive charges than negative ones. It is located on the right side of the Play Area.</p> 
+						<p id="wall-description-static">The wall has a neutral charge, no more positive charges than negative ones.</p> 
 					</div>
 			</section>
 			
@@ -67,13 +70,13 @@
 				<!-- If the button text is an image, use aria-label="Remove Wall" and aria-label="Add Wall". -->  	                 
 				<button aria-pressed="true" aria-describedby="wall-button-description">Remove Wall</button>
 			 <!-- <button aria-pressed="true" aria-describedby="wall-button-description">Add Wall</button> -->
-					<p id="wall-button-description">Toggle to conduct experiments with or without the wall.</p>
+					<p id="wall-button-description">Wall added to Play Area.</p>
 					
-				  <!-- Jesse, a div and h3 could also work in place of the fieldset and the legend. -->
+				  <!-- Jesse, a div and h3 could also work in place of the fieldset and the legend. --> 
+				<!--
 			    <div id="charge-view-widget" role="radiogroup" aria-describedby="cs-label cs-description">
 				  <h3 id="cs-label">Charge Settings</h3>
-					<!-- Jesse, again, note redundancy in aria-checked and native HTML5 checked. -->
-					<!-- Note the name attribute value is the same for each, as only one value is submitted. --> 	  
+					 	  
 					  <label for="show-charges">Show all charges <input id="show-charges" name="charge-settings" value="show-all" type="radio" aria-checked="true" checked></label>
 										
 					  <label for="show-no-charges">Show no charges <input id="show-no-charges" name="charge-settings" value="show-none" type="radio" aria-checked="false"></label>
@@ -81,28 +84,26 @@
 					  <label for="show-charge-diffs">Show charge differences <input id="show-charge-diffs" name="charge-settings" value="show-differences" type="radio" aria-checked="false"></label>
 					   								
 					  <p id="cs-description">Select how you want to see or hear the charges.</p>
-			    </div> 	                                                   
+			    </div> 	
+			-->                                                   
 					
 			    <div id="balloon-controls-widget" role="group" aria-describedby="bs-label">
 				  	<h3 id="bs-label">Balloon Settings</h3>
-					  <div id="show-balloon-buttons" role="radiogroup" aria-labelledby="sb-label">
-							<h4 id="sb-label">Experiment with one or two balloons.</h4>
-					  	<!-- Jesse, note use of aria-label here as no words are the actual buttons in the UI. -->  	                 
-							<input id="show-one-balloon" name="show-balloons" value="single-balloon-exp" type="radio" aria-label="One balloon." aria-checked="true" checked>
-							<input id="show-two-balloons" name="show-balloons" value="two-balloon-exp" type="radio" aria-label="Two balloons." aria-checked="false">
-					  </div>
+					  	<!-- Jesse, note use of aria-label here as no words are the actual buttons in the UI. --> 
+					<button aria-pressed="true" aria-describedby="balloon-switch-description">Two Balloon Experiment</button>  	                 
+							<p id="balloon-swtch-description">Green balloon removed from Play Area.</p>
 					  <!-- Remember to add and remove 's' on reset balloon label and the description. --> 
 					  <button id="balloon-reset" name="balloon-reset" type="reset" aria-describedby="balloon-reset-description">Reset Balloon</button>
-					<p id="balloon-reset-description">Returns balloon to initial position and an uncharged state.</p>  
+					<p id="balloon-reset-description">Return balloon to initial position and an uncharged state.</p>  
 				  </div>
 			    
 					<div id="sim-reset-widget">
 					  <!-- Jesse, note use of aria-label here is good as there no words are the reset button. -->
-			      <button id="sim-reset" aria-label="Reset" aria-describedby="sim-reset-description" name="sim-reset" type="reset">[Reset Image]</button>
-					  <p id="sim-reset-description">Select to return entire experiment to original state.</p>
+			      <button id="sim-reset" aria-label="Reset All" aria-describedby="sim-reset-description" name="sim-reset" type="reset">[Reset Image]</button>
+					  <p id="sim-reset-description">Reset entire experiment.</p>
 					</div>  
 			  </section>
-		
+		</main>
 		<footer role="contentinfo" aria-labelledby="about-label">
 			<nav>
 			  <h2 id="about-label">About the PhET Project</h2>
