@@ -15,17 +15,17 @@
 	</head>
 	<body>
 		<!-- Jesse, note redundancy in aria landmark roles and native html roles is intentional. Using both is debatable, but permissible as AT catches up with HTML5 semantics. -->
-		<!-- header: sets the scene with the h1 and the scene description. --> 
 		<!-- Note h1 content is intentionally different from the page title. --> 
 		<header role="banner" >
-			<!-- Header area for common sim stuff.--> 
-			<h1>Balloons and Static Electricity</h1> 
+			<!-- Header area for common sim stuff.-->  
+			<!-- Note h1 content is intentionally different from the page title. --> 
+			<h1>The Scene for Balloons and Static Electricity</h1> 
 		</header>
 		<!-- Play Area--> 
 		<main>
 		  <section id="scene-summary" aria-labelledby="scene-label" aria-describedby="scene-description">
 				 <h2 id="scene-label">Scene Summary</h2> 
-					<!-- General scene description for page load. Parts will need change dynamically once I figure that out.-->
+					<!-- General scene description for page load. Parts will need change dynamically once I figure that out. This information was originally coded as separate paragraphs, but it could even be a list. -->
 					<p id="scene-description">
 						<span id="scene-static">This simulation contains a Play Area and a Control Panel. The Play Area is a room. It has a balloon, a sweater and a wall. The Control Panel allows you to add a balloon, remove wall and reset entire experiment.</span>
 						<span id="scene-object-charges">Currently, sweater and wall have many pairs of negative and positive charges, the balloon, just a few. Balloon is in middle of Play Area, evenly between sweater and wall. </span> 	
@@ -90,7 +90,7 @@
 			    <div id="balloon-controls-widget" role="group" aria-describedby="bs-label">
 				  	<h3 id="bs-label">Balloon Settings</h3>
 					  	<!-- Jesse, note use of aria-label here as no words are the actual buttons in the UI. --> 
-					<button aria-pressed="true" aria-describedby="balloon-switch-description">Two Balloon Experiment</button>  	                 
+					<button aria-pressed="true" aria-describedby="balloon-switch-description">Two-Balloon Experiment</button>  	                 
 							<p id="balloon-switch-description">Green balloon removed from Play Area.</p>
 					  <!-- Remember to add and remove 's' on reset balloon label and the description. --> 
 					  <button id="balloon-reset" name="balloon-reset" type="reset" aria-describedby="balloon-reset-description">Reset Balloon</button>
