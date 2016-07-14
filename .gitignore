@@ -1,10 +1,12 @@
 # Design Files #
 ############
 *.psd
+*img/*.psd
 *.ai
 *.svg
 *.doc
 *.rtf
+*.docx
 
 # OS generated files #
 ######################
