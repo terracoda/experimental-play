@@ -2,6 +2,9 @@
 ############
 *.psd
 *.ai
+*.svg
+*.doc
+*.rtf
 
 # OS generated files #
 ######################
