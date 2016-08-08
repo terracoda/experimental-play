@@ -40,11 +40,10 @@
 		  	<div class="vcenter">
 					<h1>Developing Design Strategies for Accessible User Experiences with a Science Simulation</h1>
 					<br>
-					<br>
 					<ul>
-						<li>Taliesin L. Smith, OCAD University</li> 
-						<li>Clayton Lewis, University Colorado, Boulder</li>
-						<li>Emily B. Moore, University Colorado, Boulder</li>
+						<p style="color: #001B70">Taliesin L. Smith, OCAD University</p> 
+						<p>Clayton Lewis, University Colorado, Boulder</p>
+						<p>Emily B. Moore, University Colorado, Boulder</p>
 					</ul> 
 					
 					<p><small><abbr title="Human Computer Interaction Interanational">HCII</abbr>, Toronto ON, July 22, 2016</small></p>  
@@ -54,52 +53,61 @@
 <section class="slide">
 	<h2>Importance of Accessible Science Education</h2>
   	
-  	<div class="panel panel-left" style="width: 80%;">
+  	<div class="panel panel-left" style="width: 60%;">
 		<blockquote style="padding-top: 0;">P1 (paraphrased): I wanted to study Chemistry, but when I started losing my sight in high school, my teachers could not figure out a way for me to do it. They suggested Biology, but still that was still a passive experience.</blockquote>
-		<blockquote style="padding-top: 0;">P6: &quot; Interesting, I hear you talk about the negative charges and everything, and I feel kind of stupid because I don't even remember if like the little static shocks we get are negative or positive.&quot;</blockquote>
+		<blockquote style="padding-top: 0;">P6: &quot; Interesting, I hear you talk about the negative charges and everything, and I feel kind of stupid because I don't even remember if like the little static shocks we get are negative or positive. I guess they are negative.&quot;</blockquote>
+	</div>
+	<div class="panel panel-left slide" style="width: 30%;">
+	<ul>
+	<li style="color: #001B70">People are inspired by what interests them &amp;,</li>
+	<li style="color: #001B70">Science helps us understand the world around us.</li></ul>
 	</div>
 
 </section>
 
 <section class="slide">
-		<h2>About PhET Sims &amp; Design Philosophy</h2>
-		
-		<figure class="panel" style="width:30%;">
-		<figcaption>HTML5 Sims</figcaption>
+		<h2>About PhET Interactive Simulations, <em>Sims</em></h2>
+		<figure class="panel panel-left" style="width:50%;">
 	    <img src="img/phets-02.png" alt="Several PhET Simulations.">
 	    </figure>
 
-	    <div class="panel" style="width:30%;">
+	    <div class="panel" style="width:40%;">
 		<ul>
-			<li>Founded in 2002 by Nobel Laureate, Carl Wieman, the PhET Interactive Simulations has created a popular suite of over 134 high quality science simulations, or sims.</li>
-		  	<li>Next speaker will discuss  utilize a design approach called <strong>implicit scaffolding</strong> <small>(Podolefsky, Moore &amp; Perkins, 2013)</small></li>
-		 	<li><strong>Visual design &amp; layout cue students</strong> towards interacting with the Balloon by grabbing &amp; dragging it with the mouse</li>
+			<li>Founded in 2002 by Nobel Laureate, Carl Wieman</li>
+			<li>Created over 130 high quality science simulations, or sims</li>
+			<li>Very popular: over 5 million downloads per year; over 75 languages</li>
+			<li>Design of the sim guides learners along productive paths of inquiry <strong>implicitly</strong> <small>(Podolefsky, Moore, &amp; Perkins)</small><span class="speaker-note">, without the user being aware that they are being guided.</span></li>
 		</ul>
+		<p>Consider a simple exploration of <a href="http://www.colorado.edu/physics/phet/dev/html/balloons-and-static-electricity/1.2.0-reader.6/balloons-and-static-electricity_en.html?accessibility">Balloons &amp; Static Electricity</a>.</p>
+		<p class="speaker-note">learners can explore the sim and engage in open questioning. <q>I wonder what happens if…</q> and then immediately try it out.</p>
+
 	    </div>
 
-
-		<div class="panel" style="width:30%;">
-		<p>Consider t</p>
-		 <a href="http://www.colorado.edu/physics/phet/dev/html/balloons-and-static-electricity/1.2.0-reader.6/balloons-and-static-electricity_en.html?reader"><img src="img/des-pageload.png" alt="Accessible reader for Balloons and Static Electricity"></a>
-		</div>
 		<!--<figure class="panel span-one"><img src="img/triad-TML.png" alt="Learner, tool, and learning objective triad."> 
 	<figcaption><strong>Tool-mediated learning</strong> <br><small>(Vygotsky &amp; Cole, 1978)</small></figcaption></figure>-->
 	
 </section>
 
 <section class="slide">
-		<h2>Target User &amp; Design Challenge</h2>
-     <p class="speaker-note">No descriptions for visual representations; no keyboard access for interactions; Original PhET Sim was essentially a virtual black box to assistive technology.</p>  
+	<h2>Target User &amp; Design Challenge</h2>
+	  <p>How might a student who cannot see the visuals, and who does not use the mouse, interact &amp; learn along side their sighted peers with this simulation?</p>
 	 	
-		<figure>
-			<img  style="width: 400px;" src="img/triad-POU-r.png" alt="Accessible design triad: Perceivable, Operable, Understandable.">
+		<figure class="panel panel-left">
+			<img src="img/triad-POU-r.png" alt="Accessible design triad: Perceivable, Operable, Understandable.">
 			<figcaption class="speaker-note">Accessible design features focus on perceivability, operability, &amp; understandability.</figcaption>
-		</figure> 
-		<ul>
+		</figure>
+	<div class="panel panel-right">
+    <ul> 
+    	<li><strong>DOM </strong>(Document Object Model) of a web page has semantic structure that browsers make available to the screen reader</li>
+     	<li>PhET sims are built in HTML5, using the canvas and SVG elements - creating a <strong>virtual black box to screen readers</strong></li>
+    	<li>We explored how to design a <strong>secondary access layer</strong> that would make a PhET sim accessible to screen readers users</li>
+	</ul>
+	</div>
+		<!--<ul>
 			<li><strong>Access:</strong> Describe of visual representations of the objects &amp; controls, so there is <strong>perceivable access</strong> for a screen reader user.</li>
 			<li><strong>Action:</strong> Design interactive features to be <strong>operable via the keyboard</strong>, so students can take action.</li> 
 			<li><strong>Agency:</strong> Make <strong>descriptions &amp; interactions understandable</strong>, so students can engage in exploration of the scientific concepts around static electricity in their own way - asking questions; testing hypotheses.</li>	
-		</ul>
+		</ul>-->
 </section>
 
 <!--<section class="slide">
@@ -114,104 +122,104 @@
 <section class="slide">
 		<h2>Accessible Design Features</h2>
 		<div class="panel panel-left">
-			<ol>
-			<li>A semantic content &amp; interaction layer: Robust Parallel DOM <span class="speaker-note"><small>(PhET, 2015)</small>. Made the sim fully perceivable &amp; operable while using a screen reader &amp; a keyboard. The sim is no longer a “black box” to screen reader users.</span></li>
-			<li>Descriptions for all static content; plan for dynamic descriptions
+		<ol>
+			<li><strong>Robust <em>Parallel <abbe>DOM</abbr></em></strong>: A semantically rich hierarchical representation of the sim <span class="speaker-note">creating an accessible content and interaction layer; deals with black box issue</span></li>
+			<li class="slide"><strong>Descriptions</strong> for all static descriptions; plan for dynamic descriptions
 			<ul class="speaker-note">
 				<li>Charge amount for Sweater &amp; Wall</li>
 				<li>Balloon position while dragging,</li>
 				<li>Balloon sticking states upon release, &amp;</li>
 				<li>Induced charge descriptions for Wall.</li>
 			</ul></li>
-			<li>Custom Keyboard Interactions
+			<li class="slide"><strong>Custom keyboard interactions</strong> for the balloon
 				<ul>
-					<li>grab, drag, rub (WASD); jump combo keys <small>(Maximova, 2013)</small>; simple release with spacebar</li>
+					<li><em>drag</em> interaction (<strong>WASD</strong> keys)</li>
+					<li><em>release</em> mechanism (<strong>spacebar</strong>)</li>
+					<li><em>hotkey combinations</em> <small>(Maximo, 2012)</small> to jump to important locations (<strong>JW, JN, JS, JC</strong>)</li>
 				</ul> 
 			 </li>
 			</ol>
 		</div>
-	 	<figure class="panel panel-right" style="width: 400px">	
-		 	<a href="http://www.colorado.edu/physics/phet/dev/html/balloons-and-static-electricity/1.2.0-reader.5/balloons-and-static-electricity_en.html?reader"><img src="img/des-pdom.png" alt="Demo the accessible features."></a>
-		 	<figcaption><small>Simplified Parallel DOM</small></figcaption>
+	 	<figure class="panel panel-right" style="width: 500px; margin-top: -80px;">	
+		 	<a href="http://www.colorado.edu/physics/phet/dev/html/balloons-and-static-electricity/1.2.0-reader.6/balloons-and-static-electricity_en.html?reader"><img src="img/des-pdom.png" alt="Demo the accessible features."></a>
+		 	<figcaption class="speaker-note">Simplified hierarchical structure of the Parallel Dom with tab order visually marked.</figcaption>
 		</figure>
 </section>
 
 <section class="slide">
-		<h2>Methods: Inclusive &amp; Iterative</h2> 
+		<h2>Inclusive Methods &amp; Iterative Evaluation</h2> 
 		<figure class="panel">
-			<img  style="width:350px;" src="img/p5.png" alt="Experimental Play: Live Installation of a PhET Sim.">
-		</figure> 
+			<img  style="width:350px;" src="img/methods-signing.jpg" alt="Scotch tape on receipt form.">
+		</figure>
 		<figure class="panel">
 			<img  style="width:350px;" src="img/methods-camera.jpg" alt="Video camera angle for interviews.">
 		</figure>
 		<figure class="panel">
-			<img  style="width:350px;" src="img/methods-signing.jpg" alt="Scotch tape on receipt form.">
+			<img  style="width:350px;" src="img/p5.png" alt="Keyboard with hands of user interacting with the sim.">
 		</figure>
+		
 
  		<ul class="norm">
-			<li><strong>Inclusive protocols</strong> <small>(Lazar et al, 2007; Graham, 2015)</small> to recruit &amp; interview 12 screen reader users, 5 women &amp; 7 men, diverse in expertise &amp; age 19 to 61 years.</li>
-			<li><strong>Evaluation:</strong> asked users to explore the prototype as is they were trying to learn with it &amp; to think aloud <small>(Lewis &amp; Reiman, 1983; Chandrashekar et al, 2006)</small> while exploring.</li> 
+			<li><strong>Inclusive protocols</strong> <small>(Lazar et al, 2007; Graham, 2015)</small>
+			<li>Recruited 12 screen reader users, 5 women &amp; 7 men, diverse in expertise &amp; age 19 to 61 years.</li>
+			<li><strong>Evaluation:</strong> asked users to explore the prototype as if trying to learn &amp; to think aloud <small>(Lewis &amp; Reiman, 1983; Chandrashekar et al, 2006)</small> while exploring.</li> 
+			<li><strong>Live description:</strong> to test dynamic description plan.</li>
 			<li><strong>Design iterations:</strong> Made changes to the prototype &amp; descriptions in between interviews.</li>
-			<li><strong>Analysis:</strong> analyzed recordings to identify design issues &amp; our approach.</li> 
+			<li><strong>Analyzed</strong> recordings to identify design issues &amp; to evaluate our approach.</li> 
 		</ul>		 
 </section>
 
 <section class="slide">
-		<h2>What we observed: Comparative Analysis of <em>firsts</em></h2>
-		<figure><img src="img/times.png" alt="Comparison chart of participant timing." style="width:90%;"></figure>
+		<h2>Comparative Analysis of <em>firsts</em> (snapshot)</h2>
+		<figure style="margin-top: -20px;">
+		<img src="img/times.png" alt="Comparison chart of timings for participant interactions." style="width:90%;">
+		<figcaption class="speaker-note">Visualized data from 11 participants showing 5 interaction milestones from firt tab to successfully getting a change in charge on a balloon. All participants succeeded in getting a change in charge, but the amount of time it took them to do that varues greatly and tells us how the sim worked or didn't work for different users.</figcaption>
+		</figure>
 </section>
 
 <section class="slide">
 	<h2>A few Quotes</h2>
 		<h3>Navigational strategies</h3>
-		<blockquote style="padding-top: 0;">P1: &quot;I generally use the arrow keys to navigate line by line.&quot;</blockquote> 
-		<blockquote>P4: [Starts off by navigating by section] &quot;Nice, lots of regions...now, I'll look for the Main region.&quot; [Finds it on second go around.]</blockquote>
-		<blockquote>P8 (paraphrased for brevity) &quot;I'm new to this site, so I am first going to go through everything with the down arrow [...] I'm repeating stuff to make sure I didn't miss anything. [...] Now, I'm going to do a Tab through.&quot; </blockquote>   
+			<blockquote style="padding-top: 0;">P1: &quot;I generally use the arrow keys to navigate line by line.&quot;</blockquote> 
+			<blockquote style="padding-top: 0;">P8 (paraphrased for brevity) &quot;I'm new to this site, so I am first going to go through everything with the down arrow [...] I'm repeating stuff to make sure I didn't miss anything. [...] Now, I'm going to do a Tab through.&quot;</blockquote>   
+		 
 		 <h3>Engagement with science</h3>
-			 <blockquote style="padding-top: 0;">P3: [with 2 negatively charged balloons on the Sweater] &quot;I want to see what happens if I put one balloon on top of the other.&quot; [second Balloon repels and moves to the bottom of the sweater.] &quot;What will happen if I do the same thing on the Wall?&quot;</blockquote> 
+		 	<blockquote style="padding-top: 0;">P3: [with 2 negatively charged balloons on the Sweater] &quot;I want to see what happens if I put one balloon on top of the other.&quot; [second Balloon repels and moves to the bottom of the sweater.] &quot;What will happen if I do the same thing on the Wall?&quot;</blockquote> 
 			<blockquote style="padding-top: 0;">P5: [After first rubbing Balloon on Sweater] &quot;Hmmm...I got a lot more charges than I had before.&quot;</blockquote>
 </section>
 
 <section class="slide">
 		<h2>Findings: Challenges</h2>
 		<ul>
-			<li>Navigation cue in Scene Summary was important and too vague<span class="speaker-note">; needed to be clear, contextual and action oriented</span></li> 
-			<li>Information on hotkey combinations were hard to find</li>
-		  <li>Descriptions not always understood:
-			 	<ul>
-					<li>somethings (e.g. induced charge) are difficult to describe;</li> 
-					<li>interactions trigger multiple updates (verbosity issues)</li>
-			 </ul>
-			</li>
-		  <li>Balloon is a complex element:
+			<li><strong>No native HTML element</strong> to represent the balloon created multiple interaction challenges:
 				<ul>
-					<li>only 4 participants figured out how to move the balloon entirely on their own </li> 
-					<li>technical issues: no native element for familiarity; ARIA application role adds complexity, lacks clarity, &amp; browser inconsistencies with live regions <small>(WAI-ARIA, 2014)</small></li>
-					<li>custom interactions require explicit instructions</li>
-					<li>balloon contains a lot of dynamic information making it difficult to describe succinctly</li> 
-					<li></li>
-			 </ul>
-			</li>
+					<li><em>Custom interaction</em> required explicit explanation; <strong>adds verbosity</strong></li>
+					<li><em>Complex structure</em> adds screen reader <strong>verbosity</strong> as well</li>
+					<li>Balloon naturally has <em>a lot of dynamic content</em>, <strong>difficult to describe succinctly</strong></li>
+					<li>All users interacted with the Balloon; only 4 figured it out how to move it completely on their own</li>
+				</ul>
+		  </li>
+		  <li><em>Initial navigation cue</em>, &quot;Tab for first object,&quot; likely <strong>too vague</strong></li>
+		  <li><em>Hotkey information</em> not <strong>easy to find</strong></li>
+		  <li><em>Browser inconsistencies with live regions</em> – <strong>skipped descriptions</strong>.</li>
 		</ul>
 </section>
 
 <section class="slide">
 		<h2>Findings: What Worked Well</h2>
 		<ul>
-			<li><strong>Parallel DOM</strong> supports non-visual exploration &amp; interaction; it does this in many ways.
+			<li><strong>Parallel DOM</strong> provided intuitive non-visual exploration &amp; interaction; it does this effectively <span class="speaker-note">– especially for sim controls that mapped well to native HTML elements.</span>
 				<ul>
-					<li>listen first-then interact <small>(Kurniawan et al, 2003)</small></li>
-					<li>multiple ways of listening &amp; interacting<span class="speaker-note">: cursor keys; skimming &amp; scanning by structure; navigate with Tab key or by screen reader navigation commands. Users interact once they find something of interest, or the item for which they were searching.</span></li> 
+					<li>Familiar structure supported the &quot;listen first-then interact behaviour <small>(Kurniawan et al, 2003; Fakrudeen et al, 2013)</small></li>
+					<li>Multiple ways of listening &amp; interacting<span class="speaker-note">: cursor keys; skimming &amp; scanning by structure; navigate with Tab key or by screen reader navigation commands. Users interact once they find something of interest, or the item for which they were searching.</span></li> 
 				</ul>
 				</li> 
-			<li><strong>Custom interactions &amp; hotkeys</strong> for moving &amp; releasing the Balloon were learnable &amp; easy to use.</li>
+			<li><strong>Custom interactions &amp; hotkeys</strong> for moving &amp; releasing the Balloon were learnable. <span class="speaker-note"> Once learned they were easy to use and remember.</span></li>
 		<li><strong>Three aspects of descriptions</strong> worked well:
 			<ul>
-				<li>initial Scene Summary, <span class="speaker-notes">provided big picture view,</span> </li>
-				<li>timely dynamic descriptions for charge changes connected
-				users actions with this important change <small>(WAI-ARIA,
+				<li>Initial Scene Summary, provided <strong>big picture view</strong>,</li>
+				<li><em>Timely dynamic description updates</em> for charge information, &amp; timely interaction alerts connected users actions with important changes, creating a <strong>meaningful interaction flow</strong> <small>(WAI-ARIA,
 				2014)</small></li>
-				<li>timely system of interaction alerts created a meaningful interaction flow.</li>
 		</ul>
 </section>
 <!--<section class="slide">
@@ -236,37 +244,67 @@
 </section>-->
 
 <section class="slide">
-		<h2>Conclusions &amp; Future Work</h2>
+		<h2>In Conclusions</h2>
 		<figure class="panel" style="width: 1100px; margin-bottom: 40px;">
 		 <img src="img/triad-equation.png" alt="">
 		</figure>
 
-		<div class="panel panel-left"><h3>Inclusive Design</h3>
+		<div class="panel panel-left">
+		<ul>
+			<li>Created accessible design features</li> 
+			<li>Tested the features with 12 users</li>
+			<li>We found: <em>descriptions</em> within a <em>robust Parallel DOM</em> made the sim fully <strong>perceivable</strong> &amp; <strong>operable</strong>;
+				<ul>
+					<li>however, some descriptions were <strong>difficult to understand</strong> for some users.</li>
+				</ul>
+			</li>
+		</ul>
+		</div>
+
+		<div class="panel panel-left">
+			<ul>
+				<li>All participants <strong>accessed</strong> the sim descriptions, took <strong>action</strong> using the keyboard, &amp; interacted with the Balloon.</li>
+				<li><strong>Four participants</strong> demonstrated <strong>agency</strong> by engaging in unprompted, self-directed exploration which resulted in learning.</li>
+				<li><strong>We believe this indicates that the approach we are taking is a good one.</strong></li>
+			</ul>
+		</div>
+
+		<!--<div class="panel panel-left"><h3>Inclusive Design</h3>
 		<ul>
 			<li>to PhET's Implicit Scaffolding we added Web Accessibility best practices </li> 
 			<li>Created Access, Action and Agency for screen reader users</li>
 			<li>Benefit students with dexterity impairments, teachers &amp; other makers of highly interactive learning tools</li>
-		</ul> </div>
-		<div class="panel panel-right"><h3>Future Work</h3>
-		<ul>
-			<li>Complete descriptions</li> 
-			<li>Re-design balloon interaction</li>
-			<li>Investigate where sonification can augment or support description</li>
-			<li>Apply our description framework to other sims</li> 
-		</ul></div>
+		</ul> </div>-->
+		
 </section>
 
 <section class="slide">
-		<h2>Acknowledgements</h2>
-		<p>A big thanks to:</p>
+		<h2>Acknowledgements &amp; Future Work</h2>
+		<div class="panel panel-left">
+			<h3>A big thanks to:</h3>
 			 <ul> 
-					<li>Jesse Greenberg, PhET Software Developer, for implementation efforts &amp; design insights</li>
-					<li>Our enthusiastic participants</li>
-					<li>Shannan Fraser &amp;Sambhavi Chandrashekar for assistance with interviews</li>
-					<li>Memorial university &amp; CITL Media Services for video equipment</li>
+					<li>Jesse Greenberg, PhET Software Developer, for implementation &amp; design insights</li>
+					<li>Our super enthusiastic participants</li>
+					<li>Shannon Fraser &amp; Sambhavi Chandrashekar for assistance with interviews</li>
+					<li>Memorial University &amp; <abbr>CITL</abbr> Media Services for video equipment</li>
 					<li>Inclusive Design Research Centre (Vera Roberts &amp; Bert Shire) for space &amp; video equipment</li>
-					<li>Funding for this work was provided in part by the National Science Foundation (DRL # 1503439), the University of Colorado Boulder, and the William and Flora Hewlett Foundation.</li>
-		  </ul>
+		  	</ul>
+		</div>
+
+		  <div class="panel panel-right">
+		  <h3>Funding for this work</h3>
+		  <ul>
+		  	<li>provided in part by the National Science Foundation (DRL#1503439), the University of Colorado Boulder, &amp; the William and Flora Hewlett Foundation.</li>
+		  	</ul>
+		  <h3>Future Work</h3>
+			<ul>
+				<li>Evaluate <a href="http://www.colorado.edu/physics/phet/dev/html/balloons-and-static-electricity/1.2.0-reader.6/balloons-and-static-electricity_en.html?reader">latest prototype</a> with users</li> 
+				<li>Investigate where sonification can augment or support description</li>
+				<li>Apply our description framework to other sims</li> 
+			</ul>
+		</div>
+		<p style="clear: both;">More information: <a href="https://phet.colorado.edu/en/accessibility">phet.colorado.edu/en/accessibility</a></p>
+		<p>Taliesin L. Smith: talilief@gmail.com</p>
 </section>
 
 <section class="slide">
